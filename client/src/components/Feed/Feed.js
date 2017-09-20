@@ -10,7 +10,7 @@ import SaveBtn from "../SaveBtn";
 
 class Feed extends Component {
   state = {
-    articles: [],
+    posts: [],
     topic: "",
     startyear: "",
     endyear: "",
@@ -24,29 +24,29 @@ class Feed extends Component {
     });
   };
 
-  saveArticle = article => {
-      API.saveArticle(
+  savePost = post => {
+      API.savePost(
         {
-        title: article.article.headline.main,
-        date: article.article.pub_date,
-        url: article.article.web_url
+        title: post.post.headline.main,
+        date: post.post.pub_date,
+        url: post.post.web_url
       }
       )
-        .then(res => console.log(article))
-        .catch(err => console.log(article));
+        .then(res => console.log(post))
+        .catch(err => console.log(post));
   };
 
 
 
   handleFormSubmit = event => {
-    // When the form is submitted, prevent its default behavior, get articles and update the articles state
+    // When the form is submitted, prevent its default behavior, get posts and update the posts state
     event.preventDefault();
-    API.searchArticle(this.state.topic, this.state.startyear, this.state.endyear)
+    API.searchPost(this.state.topic, this.state.startyear, this.state.endyear)
       // .then(res => console.log("HANDLEFORMSUBMIT RESULTS IN SEARCH.JS", res.data.response.docs))
-      .then(res => this.setState({ articles: res.data.response.docs, topic: "", startyear: "", endyear: "", searchClicked: true }))
+      .then(res => this.setState({ posts: res.data.response.docs, topic: "", startyear: "", endyear: "", searchClicked: true }))
 
       .catch(err => console.log(err));
-      // console.log("ARTICLES STATE FROM SEARCH.JS", this.state.articles);
+      // console.log("ARTICLES STATE FROM SEARCH.JS", this.state.posts);
     };
 
 
@@ -83,7 +83,7 @@ class Feed extends Component {
                   disabled={!(this.state.topic && this.state.startyear && this.state.endyear)}
                   onClick={this.handleFormSubmit}
                 >
-                  Find Articles
+                  Find Posts
                 </FormBtn>
               </form>
               </Col>
@@ -93,21 +93,21 @@ class Feed extends Component {
             <Container fluid>
               <Row>
                 <Col size="md-12">
-                 {this.state.articles.length ? (
+                 {this.state.posts.length ? (
                   <div>
                     <h2>Search Results</h2>
                     <List>
-                      {this.state.articles.map(article => (
+                      {this.state.posts.map(post => (
 
-                        <ListItem key={article._id}>
-                        <Link target="_blank" to={article.web_url}>
+                        <ListItem key={post._id}>
+                        <Link target="_blank" to={post.web_url}>
                           <strong>
-                            {article.headline.main}
+                            {post.headline.main}
                           </strong>
                         </Link>
                         <br />
-                          {article.pub_date}
-                          <SaveBtn onClick={() => this.saveArticle({article})} />
+                          {post.pub_date}
+                          <SaveBtn onClick={() => this.savePost({post})} />
 
                         </ListItem>
                       ))}

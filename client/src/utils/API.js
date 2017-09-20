@@ -1,13 +1,13 @@
 import axios from "axios";
 
 export default {
-  // Gets all Articles from DB
-  getArticles: function() {
-    return axios.get("/api/articles");
+  // Gets all Posts from DB
+  getPosts: function() {
+    return axios.get("/api/posts");
   },
-  // Queries Articles
-  searchArticle: function(query, begin, end) {
-    return axios.get("https://api.nytimes.com/svc/search/v2/articlesearch.json", {
+  // Queries Posts
+  searchPosts: function(query, begin, end) {
+    return axios.get("https://api.nytimes.com/svc/search/v2/postsearch.json", {
       params: {
         'api-key': "7e989fab4dfe40ab9a68b494a64c7fd3",
         'q': query,
@@ -16,13 +16,13 @@ export default {
       }
     });
   },
-  // Deletes the Article with the given id
-  deleteArticle: function(id) {
-    return axios.delete("/api/articles/" + id);
+  // Deletes the Post with the given id
+  deletePosts: function(id) {
+    return axios.delete("/api/posts/" + id);
   },
-  // Saves a Article to the database
-  saveArticle: function(articleData) {
-    console.log("ARTICLE SAVED", articleData);
-    return axios.post("/api/articles", articleData);
+  // Saves a Post to the database
+  savePosts: function(postData) {
+    console.log("ARTICLE SAVED", postData);
+    return axios.post("/api/posts", postData);
   }
 };
