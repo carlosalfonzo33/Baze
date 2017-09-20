@@ -6,9 +6,9 @@ import { List, ListItem } from "../../components/List";
 import { Input, FormBtn } from "../../components/Form";
 import SaveBtn from "../SaveBtn";
 
-import Saved from "../Saved";
 
-class Search extends Component {
+
+class Feed extends Component {
   state = {
     articles: [],
     topic: "",
@@ -32,7 +32,7 @@ class Search extends Component {
         url: article.article.web_url
       }
       )
-        .then(res => <Saved />)
+        .then(res => console.log(article))
         .catch(err => console.log(article));
   };
 
@@ -129,4 +129,4 @@ class Search extends Component {
   }
 }
 
-export default Search;
+export default Feed;
