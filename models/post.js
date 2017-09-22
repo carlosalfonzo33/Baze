@@ -5,8 +5,9 @@ const postSchema = new Schema({
   userId: { type: String, required: true },
   comment: { type: String, required: true },
   postType: { type: String, required: true },
+  isAlert: { type: Boolean, default: false},
   station: { type: String},
-  trainId: { type: String},
+  trainLine: { type: String},
   synopsis: String,
   date: { type: Date, default: Date.now }
 });
