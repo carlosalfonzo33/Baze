@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import API from "../../utils/API";
-// import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import Feednav from "../Feednav"
+import API from "../../../utils/API";
+import { Link } from "react-router-dom";
+import { Col, Row, Container } from "../../../components/Grid";
+import { List, ListItem } from "../../../components/List";
+import DeleteBtn from "../../DeleteBtn"
+import Feednav from "../../Feednav"
 
 
-class Feed extends Component {
+class myFeed extends Component {
   state = {
     posts: []
   };
@@ -19,13 +20,16 @@ class Feed extends Component {
   loadPosts = () => {
     API.getPosts()
       .then(res =>
-        // console.log(res.data)
         this.setState({ posts: res.data})
       )
       .catch(err => console.log(err));
-
   };
 
+  deletePost = id => {
+    API.deletePost(id)
+      .then(res => this.loadPosts())
+      .catch(err => console.log(err));
+  };
 
   render() {
     return (
@@ -59,4 +63,4 @@ class Feed extends Component {
   }
 }
 
-export default Feed;
+export default myFeed;
