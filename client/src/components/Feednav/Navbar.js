@@ -14,13 +14,22 @@ const Navbar = props =>
       <ul className="nav navbar-nav">
         <li
           className={
-            window.location.pathname === "/feed" ? "active" : ""}
-        >
+            window.location.pathname === "/feed" ? "active" : ""}>
           <Link to="/feed">All</Link>
         </li>
-        <li className={window.location.pathname === "/feed/myfeed" ? "active" : ""}>
-          <Link to="feed/myfeed">My Posts</Link>
+        <li className={window.location.pathname === "/feed/delayfeed" ? "active" : ""}>
+          <Link to="/feed/delayfeed">Delay Posts</Link>
         </li>
+        <li className={window.location.pathname === "/feed/station" ? "active" : ""}>
+          <Link to="/feed/station">Station Posts</Link>
+        </li>
+        <li className={window.location.pathname === "/feed/train" ? "active" : ""}>
+          <Link to="/feed/train">Train Posts</Link>
+        </li>
+        <li className={window.location.pathname === "/feed/myfeed" ? "active" : ""}>
+          <Link to="/feed/myfeed">My Posts</Link>
+        </li>
+
       </ul>
     </div>
   </nav>;

@@ -7,7 +7,7 @@ import DeleteBtn from "../../DeleteBtn";
 import Feednav from "../../Feednav";
 
 
-class myFeed extends Component {
+class delayFeed extends Component {
   state = {
     posts: []
   };
@@ -53,7 +53,7 @@ class myFeed extends Component {
                   ))}
                 </List>
               ) : (
-                <h3>No Posts Saved! Search for and save posts above</h3>
+                <h3>No Posts Saved!</h3>
               )}
             </Col>
           </Row>
@@ -64,4 +64,4 @@ class myFeed extends Component {
   }
 }
 
-export default myFeed;
+export default delayFeed;

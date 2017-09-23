@@ -6,7 +6,7 @@ export default {
     return axios.get("/api/posts");
   },
   // Queries Posts
-  searchPosts: function(query, begin, end) {
+  searchPost: function(query, begin, end) {
     return axios.get("https://api.nytimes.com/svc/search/v2/postsearch.json", {
       params: {
         'api-key': "7e989fab4dfe40ab9a68b494a64c7fd3",
@@ -17,7 +17,7 @@ export default {
     });
   },
   // Deletes the Post with the given id
-  deletePosts: function(id) {
+  deletePost: function(id) {
     return axios.delete("/api/posts/" + id);
   },
   // Saves a Post to the database
