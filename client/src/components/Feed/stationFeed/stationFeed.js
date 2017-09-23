@@ -7,7 +7,7 @@ import DeleteBtn from "../../DeleteBtn";
 import Feednav from "../../Feednav";
 
 
-class myFeed extends Component {
+class stationFeed extends Component {
   state = {
     posts: []
   };
@@ -48,6 +48,7 @@ class myFeed extends Component {
                       <br />
                       {post.date}
 
+
                       <DeleteBtn onClick={() => this.deletePost(post._id)} />
                     </ListItem>
                   ))}
@@ -64,4 +65,4 @@ class myFeed extends Component {
   }
 }
 
-export default myFeed;
+export default stationFeed;

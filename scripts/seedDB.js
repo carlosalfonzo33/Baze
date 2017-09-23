@@ -15,16 +15,20 @@ const userSeed = [
   name: "Alex",
   email: "alex@alex.com",
   date: new Date(Date.now()),
-  posts: [{
-    0: "ObjectId(59c4cc6f13d5afa89530cedd)",
-    1: "ObjectId(59c4cc6f13d5afa89530cedd)"
-  }]
+  posts: [
+    'ObjectId("59c5a89587745bb429e6fe66")',
+    'ObjectId("59c5a89587745bb429e6fe67")'
+  ]
   },
   {
   name: "Sam",
   email: "sam@sam.com",
   date: new Date(Date.now()),
-
+  posts: [
+    'ObjectId("59c5a89587745bb429e6fe68")',
+    'ObjectId("59c5a89587745bb429e6fe69")',
+    'ObjectId("59c5a89587745bb429e6fe6a")'
+  ]
   },
   {
   name: "Morgan",
@@ -40,13 +44,13 @@ const userSeed = [
 
 const postSeed = [
   {
-   userId: "59c4ca4c880b76a869998223",
+   userId: 'ObjectId("59c5a89587745bb429e6fe6b")',
    comment: "smells like piss",
    postType: "station",
    station: "Powell St."
   },
   {
-   userId: "59c4ca4c880b76a869998223",
+   userId: 'ObjectId("59c5a89587745bb429e6fe6b")',
    comment: "a train is stopped at the platform and the conductor has left to investigate a problem",
    isAlert: true,
    postType: "station",
@@ -54,27 +58,47 @@ const postSeed = [
 
   },
   {
-   userId: "59c4ca4c880b76a869998224",
+   userId: 'ObjectId("59c5a89587745bb429e6fe6c")',
    comment: "police are everywhere",
    postType: "station",
    station: "Lake Merritt"
 
   },
   {
-   userId: "59c4ca4c880b76a869998225",
+   userId: 'ObjectId("59c5a89587745bb429e6fe6c")',
    comment: "a pigeon shit on my head",
    postType: "station",
    station: "San Leandro"
 
   },
   {
-   userId: "59c4ca4c880b76a869998226",
+   userId: 'ObjectId("59c5a89587745bb429e6fe6c")',
    comment: "all of the trains come to me",
    postType: "station",
    station: "West Oakland"
 
-  }
+ },
+ {
+   comment: "someone pooped in the last train car",
+   postType: "train",
+   station: "Embarcadero",
+   trainLine: "Dublin/Pleasanton"
 
+ },
+ {
+   comment: "can you believe this lady with her lawn chair set up during rush hour?",
+   postType: "train",
+   station: "West Oakland",
+   trainLine: "Richmond"
+
+ },
+ {
+   comment: "dance party on the train",
+   postType: "train",
+   station: "Powell St.",
+   trainLine: "Daly City"
+
+ }
 ];
 
 db.User

@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const postSchema = new Schema({
-  userId: { type: String, required: true },
+  userId: { type: Schema.Types.ObjectId, ref: "User"},
   comment: { type: String, required: true },
   postType: { type: String, required: true },
   isAlert: { type: Boolean, default: false},
