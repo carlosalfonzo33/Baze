@@ -98,7 +98,176 @@ const postSeed = [
    station: "Powell St.",
    trainLine: "Daly City"
 
+ },
+ {
+   comment: "can you believe this lady with her lawn chair set up during rush hour?",
+   postType: "train",
+   station: "West Oakland",
+   trainLine: "Richmond"
+
+ },
+ {
+   comment: "dance party on the train",
+   postType: "train",
+   station: "Powell St.",
+   trainLine: "Daly City"
+
+ },
+ {
+   comment: "can you believe this lady with her lawn chair set up during rush hour?",
+   postType: "train",
+   station: "West Oakland",
+   trainLine: "Richmond"
+
+ },
+ {
+   comment: "dance party on the train",
+   postType: "train",
+   station: "Powell St.",
+   trainLine: "Daly City"
+
+ },
+ {
+   comment: "can you believe this lady with her lawn chair set up during rush hour?",
+   postType: "train",
+   station: "West Oakland",
+   trainLine: "Richmond"
+
+ },
+ {
+   comment: "dance party on the train",
+   postType: "train",
+   station: "Powell St.",
+   trainLine: "Daly City"
+
+ },
+ {
+   comment: "can you believe this lady with her lawn chair set up during rush hour?",
+   postType: "train",
+   station: "West Oakland",
+   trainLine: "Richmond"
+
+ },
+ {
+   comment: "dance party on the train",
+   postType: "train",
+   station: "Powell St.",
+   trainLine: "Daly City"
+
+ },
+ {
+   comment: "can you believe this lady with her lawn chair set up during rush hour?",
+   postType: "train",
+   station: "West Oakland",
+   trainLine: "Richmond"
+
+ },
+ {
+   comment: "dance party on the train",
+   postType: "train",
+   station: "Powell St.",
+   trainLine: "Daly City"
+
+ },
+ {
+   comment: "dance party on the train",
+   postType: "train",
+   station: "Powell St.",
+   trainLine: "Daly City"
+
+ },
+ {
+   comment: "can you believe this lady with her lawn chair set up during rush hour?",
+   postType: "train",
+   station: "West Oakland",
+   trainLine: "Richmond"
+
+ },
+ {
+   comment: "dance party on the train",
+   postType: "train",
+   station: "Powell St.",
+   trainLine: "Daly City"
+
+ },
+ {
+   comment: "can you believe this lady with her lawn chair set up during rush hour?",
+   postType: "train",
+   station: "West Oakland",
+   trainLine: "Richmond"
+
+ },
+ {
+   comment: "dance party on the train",
+   postType: "train",
+   station: "Powell St.",
+   trainLine: "Daly City"
+
+ },
+ {
+   comment: "can you believe this lady with her lawn chair set up during rush hour?",
+   postType: "train",
+   station: "West Oakland",
+   trainLine: "Richmond"
+
+ },
+ {
+   comment: "dance party on the train",
+   postType: "train",
+   station: "Powell St.",
+   trainLine: "Daly City"
+
+ },
+ {
+   comment: "dance party on the train",
+   postType: "train",
+   station: "Powell St.",
+   trainLine: "Daly City"
+
+ },
+ {
+   comment: "can you believe this lady with her lawn chair set up during rush hour?",
+   postType: "train",
+   station: "West Oakland",
+   trainLine: "Richmond"
+
+ },
+ {
+   comment: "dance party on the train",
+   postType: "train",
+   station: "Powell St.",
+   trainLine: "Daly City"
+
+ },
+ {
+   comment: "can you believe this lady with her lawn chair set up during rush hour?",
+   postType: "train",
+   station: "West Oakland",
+   trainLine: "Richmond"
+
+ },
+ {
+   comment: "dance party on the train",
+   postType: "train",
+   station: "Powell St.",
+   trainLine: "Daly City"
+
+ },
+ {
+   comment: "can you believe this lady with her lawn chair set up during rush hour?",
+   postType: "train",
+   station: "West Oakland",
+   trainLine: "Richmond"
+
+ },
+ {
+   comment: "dance party on the train",
+   postType: "train",
+   station: "Powell St.",
+   trainLine: "Daly City"
+
  }
+
 ];
 
 db.User
