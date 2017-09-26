@@ -24,10 +24,16 @@ class myFeed extends Component {
     API.getPosts()
       .then(res =>
         // console.log(res.data)
-        this.setState({ posts: res.data})
+        this.setState({ posts: res.data, displayedItems: [], startItem: 0, hasMore: true})
       )
       .catch(err => console.log(err));
 
+  };
+
+  deletePost = id => {
+    API.deletePost(id)
+      .then(res => this.loadPosts())
+      .catch(err => console.log(err));
   };
 
   displayItems = () => {
