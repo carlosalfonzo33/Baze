@@ -4,7 +4,6 @@ nav.navbar {
   border: none;
 }
 
-.navbar-brand:hover {
-  background-color: black;
+.navbar a {
   color: white;
 }

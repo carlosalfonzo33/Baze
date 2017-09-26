@@ -59,7 +59,6 @@ class delayFeed extends Component {
   }
 
   render() {
-    console.log("render");
 
     const loader = <div className="loader">Loading ...</div>;
 
