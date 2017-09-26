@@ -14,13 +14,20 @@ class StationPost extends Component {
     comment: "",
     postType: "station",
     isAlert: false,
-    station: "Bay Fair"
+    station: ""
   };
 
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
+    });
+  };
+
+  handleDropdownChange = event => {
+    const { value } = event.target;
+    this.setState({
+      station: value
     });
   };
 
@@ -47,7 +54,9 @@ class StationPost extends Component {
                 <h1>Create a Post</h1>
 
               <form>
-                <Stationmenu />
+                <Stationmenu
+                  onChange={this.handleDropdownChange}
+                />
                 <Input
                   value={this.state.comment}
                   onChange={this.handleInputChange}

@@ -1,15 +1,19 @@
 import React from "react";
 
-export const Stationmenu = () =>
-<select>
-  <option className="default-text">Select Station</option>
+// var stations = ["12th St. Oakland City Center", "16th St Mission", "19th St. Oakland", "24th St. Mission", "Ashby (Berkeley)", "Balboa Park"];
 
-  <option className="station">12th Street Oakland</option>
-  <option className="station">12th Street Oakland</option>
-  <option className="station">12th Street Oakland</option>
-  <option className="station">12th Street Oakland</option>
-  <option className="station">12th Street Oakland</option>
-  <option className="station">12th Street Oakland</option>
+
+export const Stationmenu = props =>
+
+
+<select {...props}>
+    <option>12th St. Oakland City Center</option>
+    <option>16th St. Mission</option>
+    <option>19th St. Oakland</option>
+    <option>24th St. Mission</option>
+    <option>16th St. Mission</option>
+    <option>Ashby (Berkeley)</option>
+    <option>Balboa Park</option>
 
 </select>;
 
