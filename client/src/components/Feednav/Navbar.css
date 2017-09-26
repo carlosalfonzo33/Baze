@@ -1,3 +1,18 @@
 nav.navbar.navbar-default {
   margin-bottom: 0;
 }
+
+.active {
+  background-color: #56aaca;
+  color: white;
+}
+
+.navbar-brand:hover,
+.active:hover {
+  background-color: #56aaca;
+  color: white;
+}
+
+.nav>li>a:hover {
+  background-color: #56aaca;
+}
