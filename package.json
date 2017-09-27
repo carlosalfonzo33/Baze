@@ -7,6 +7,7 @@
     "server": "node server.js",
     "client": "cd client && npm run start",
     "start": "./node_modules/.bin/concurrently \"./node_modules/.bin/nodemon\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
     "build": "cd client && npm run build",
     "deploy": "npm run build && git add . && git commit -m \"Building for production\" && git push heroku master",
     "seed": "node scripts/seedDB",
