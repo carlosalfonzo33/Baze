@@ -24,5 +24,10 @@ export default {
   savePosts: function(postData) {
     console.log("ARTICLE SAVED", postData);
     return axios.post("/api/posts", postData);
+  },
+
+  updateUser: function(id) {
+    console.log("POSTS data to insert into users!", id);
+    return axios.post("/api/users/update", id);
   }
 };

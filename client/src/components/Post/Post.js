@@ -7,14 +7,14 @@ import { List, ListItem } from "../../components/List";
 import { Input, FormBtn, Stationmenu } from "../../components/Form";
 import SaveBtn from "../SaveBtn";
 
-class StationPost extends Component {
+class Post extends Component {
   state = {
     posts: [],
-    userId: "59c9de02544c7f0849aa19c3",
+    userId: "59cc10614aa2ea16c2187dad",
     comment: "",
     postType: "station",
     isAlert: false,
-    station: ""
+    station: "12th St. Oakland City Center"
   };
 
   handleInputChange = event => {
@@ -36,11 +36,17 @@ class StationPost extends Component {
     // When the form is submitted, prevent its default behavior, get posts and update the posts state
     event.preventDefault();
     API.savePosts({userId: this.state.userId, comment: this.state.comment, postType: this.state.postType, station: this.state.station})
-      // .then(res => console.log("HANDLEFORMSUBMIT RESULTS IN SEARCH.JS", res.data.response.docs))
-      .then(res => this.setState({ posts: [], comment: "" }))
+      .then(res => this.updateUserPosts(res), this.setState({ posts: [], comment: "" }))
 
       .catch(err => console.log(err));
-      // console.log("ARTICLES STATE FROM SEARCH.JS", this.state.posts);
+    };
+
+    updateUserPosts = res => {
+      // console.log(res.data);
+      API.updateUser(res.data)
+      // want to re-route to feed after updating
+      .then(response => console.log("response", response))
+      .catch(err => console.log(err));
     };
 
 
@@ -83,4 +89,4 @@ class StationPost extends Component {
 
 }
 
-export default StationPost;
+export default Post;
