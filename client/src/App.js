@@ -6,8 +6,7 @@ import myFeed from "./components/Feed/myFeed";
 import delayFeed from "./components/Feed/delayFeed";
 import stationFeed from "./components/Feed/stationFeed";
 import trainFeed from "./components/Feed/trainFeed";
-import TrainPost from "./components/TrainPost";
-import StationPost from "./components/StationPost";
+import Post from "./components/Post";
 import NoMatch from "./components/NoMatch";
 
 
@@ -21,8 +20,7 @@ const App = () =>
         <Route exact path="/feed/myfeed" component={myFeed} />
         <Route exact path="/feed/station" component={stationFeed} />
         <Route exact path="/feed/train" component={trainFeed} />
-        <Route exact path="/post/train" component={TrainPost} />
-        <Route exact path="/post/station" component={StationPost} />
+        <Route exact path="/post" component={Post} />
         <Route component={NoMatch} />
       </Switch>
     </div>

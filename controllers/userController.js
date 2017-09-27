@@ -15,11 +15,11 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  findOneAndUpdate: function(req, res) {
+  updateUser: function(req, res) {
     db.User
-      .findOneAndUpdate({ _id: req.params.id }, { $push: { "posts": doc._id } }, { new: true })
+      .findOneAndUpdate({ "_id": req.body.userId }, { $push: { "posts": req.body._id } }, { new: true })
       .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+      .catch(err => console.log("update user error", err));
   }
 
 };
