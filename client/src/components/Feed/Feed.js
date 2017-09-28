@@ -11,7 +11,7 @@ class Feed extends Component {
     posts: [],
     displayedItems: [],
     startItem: 0,
-    hasMore: true
+    hasMore: true,
   };
 
   //when saved component loads, get the posts already saved to db
@@ -37,8 +37,10 @@ class Feed extends Component {
     var postSelection = this.state.posts.slice(this.state.startItem,this.state.startItem+chunkSize);
 
     postSelection.map(post => {
+
         this.state.displayedItems.push(
           <ListItem key={post._id}>
+          <div><img src={post.userId.img} className="img-responsive" alt={post.userId.name} style={{height: "50px", float: "left", marginRight: "5px"}}/></div>
           {post.station}
           <br />
           {post.comment}

@@ -4,17 +4,18 @@ import API from "../../utils/API";
 import { Link, Redirect } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, FormBtn, Stationmenu } from "../../components/Form";
+import { Input, FormBtn, Stationmenu, PostType, TrainLines } from "../../components/Form";
 import SaveBtn from "../SaveBtn";
 
 class Post extends Component {
   state = {
     posts: [],
-    userId: "59cc10614aa2ea16c2187dad",
+    userId: "59cd655cbd1d0402842ae948",
     comment: "",
-    postType: "station",
+    postType: "Train",
     isAlert: false,
     station: "12th St. Oakland City Center",
+    trainLine: "Pittsburg Bay Point - SFIA Millbrae",
     fireRedirect: false
   };
 
@@ -25,26 +26,26 @@ class Post extends Component {
     });
   };
 
-  handleStationChange = event => {
-    const { value } = event.target;
-    this.setState({
-      station: value
-    });
-  };
-
-  handlePostTypeChange = event => {
-    const { value } = event.target;
-    this.setState({
-      postType: value
-    });
-  };
-
   handleFormSubmit = event => {
     // When the form is submitted, prevent its default behavior, get posts and update the posts state
     event.preventDefault();
-    API.savePosts({userId: this.state.userId, comment: this.state.comment, postType: this.state.postType, station: this.state.station})
-      .then(res => this.updateUserPosts(res), this.setState({ posts: [], comment: "" }))
-
+    API.savePosts(
+      { userId: this.state.userId,
+        comment: this.state.comment,
+        postType: this.state.postType,
+        isAlert: this.state.isAlert,
+        station: this.state.station,
+        trainLine: this.state.trainLine
+      })
+      .then(res => this.updateUserPosts(res), this.setState(
+        { posts: [],
+          comment: "",
+          postType: "Train",
+          isAlert: false,
+          station: "12th St. Oakland City Center",
+          trainLine: "Pittsburg Bay Point - SFIA Millbrae",
+          fireRedirect: false
+      }))
       .catch(err => console.log(err));
     };
 
@@ -55,12 +56,6 @@ class Post extends Component {
     .then(response => this.setState({ fireRedirect: true }))
     .catch(err => console.log(err));
   };
-
-  // redirect = res => {
-  //   console.log('yo!');
-  // };
-
-
 
   render() {
     const { fireRedirect } = this.state
@@ -73,22 +68,24 @@ class Post extends Component {
 
               <h1>Create a Post</h1>
 
-              <select>
-                <option>Train</option>
-                <option>Station</option>
-                onChange={this.handlePostTypeChange}
-              </select>
               <form>
-                <Stationmenu
-                  onChange={this.handleStationChange}
-                />
-                <Input
-                  value={this.state.comment}
+                <PostType
+                  name="postType"
                   onChange={this.handleInputChange}
-                  name="comment"
-                  placeholder="Start typing your comment"
-                />
-
+                /><br />
+                <Stationmenu
+                  name="station"
+                  onChange={this.handleInputChange}
+                /><br />
+                <TrainLines
+                  name="trainLine"
+                  onChange={this.handleInputChange}
+                /><br />
+                <textarea
+                name="comment"
+                value={this.state.comment}
+                onChange={this.handleInputChange}
+                /><br />
                 <FormBtn
                   disabled={!(this.state.comment)}
                   onClick={this.handleFormSubmit}>
