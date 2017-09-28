@@ -5,6 +5,10 @@ export default {
   getPosts: function() {
     return axios.get("/api/posts");
   },
+
+  getUserPosts: function(id) {
+    return axios.get("/api/users/" + id);
+  },
   // Queries Posts
   searchPost: function(query, begin, end) {
     return axios.get("https://api.nytimes.com/svc/search/v2/postsearch.json", {
