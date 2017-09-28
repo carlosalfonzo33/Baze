@@ -9,7 +9,7 @@ import InfiniteScroll from 'react-infinite-scroller';
 
 class myFeed extends Component {
   state = {
-    userId: "59cc10614aa2ea16c2187dad",
+    userId: "59cd655cbd1d0402842ae948",
     posts: [],
     displayedItems: [],
     startItem: 0,
