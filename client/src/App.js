@@ -9,6 +9,7 @@ import trainFeed from "./components/Feed/trainFeed";
 import TrainPost from "./components/TrainPost";
 import StationPost from "./components/StationPost";
 import NoMatch from "./components/NoMatch";
+import SignUp from "./components/SignUp";
 
 
 const App = () =>
@@ -16,6 +17,7 @@ const App = () =>
     <div>
       <Switch>
         <Route exact path="/" component={Login} />
+        <Route exact path="/signup" component={SignUp} />
         <Route exact path="/feed" component={Feed} />
         <Route exact path="/feed/delayfeed" component={delayFeed} />
         <Route exact path="/feed/myfeed" component={myFeed} />

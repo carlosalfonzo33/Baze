@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Container, Row } from "../Grid";
 import { Link, Redirect } from "react-router-dom";
 import Nav from "../Nav";
-import './login.css';
+import './signup.css';
 
 class Login extends Component {
 
@@ -14,13 +14,13 @@ class Login extends Component {
         <Row>
           <Nav />
           <div className="login-container">
+            <h1>
+                Signup
+            </h1>
             <form
-              action="/login"
-              method="post"
+                action="/signup"
+                method="post"
             >
-              <h1>
-                Login
-              </h1>
               <div className="form-group">
               <input className="form-control"
                 type="text"
@@ -42,9 +42,9 @@ class Login extends Component {
               </button>
               <hr />
               <p>
-                Need an account?&nbsp;&nbsp;&nbsp;&nbsp; 
-                <Link to="/signup">
-                  Signup
+                Already have an account?&nbsp;&nbsp;&nbsp;&nbsp; 
+                <Link to="/">
+                  Login
                 </Link>
               </p>
             </form>
