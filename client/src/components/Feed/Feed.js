@@ -21,10 +21,7 @@ class Feed extends Component {
 
   loadPosts = () => {
     API.getPosts()
-      .then(res =>
-        // console.log(res.data)
-        this.setState({ posts: res.data})
-      )
+      .then(res => this.setState({ posts: res.data}))
       .catch(err => console.log(err));
 
   };

@@ -28,6 +28,6 @@ export default {
 
   updateUser: function(id) {
     console.log("POSTS data to insert into users!", id);
-    return axios.post("/api/users/update", id);
+    return axios.post("/api/users/update ", id);
   }
 };
