@@ -9,6 +9,7 @@ import InfiniteScroll from 'react-infinite-scroller';
 
 class myFeed extends Component {
   state = {
+    userId: "59cc10614aa2ea16c2187dad",
     posts: [],
     displayedItems: [],
     startItem: 0,
@@ -17,14 +18,14 @@ class myFeed extends Component {
 
   //when saved component loads, get the posts already saved to db
   componentDidMount() {
-    this.loadPosts();
+    this.loadPosts(this.state.userId);
   }
 
-  loadPosts = () => {
-    API.getPosts()
+  loadPosts = id => {
+    API.getUserPosts(id)
       .then(res =>
-        // console.log(res.data)
-        this.setState({ posts: res.data, displayedItems: [], startItem: 0, hasMore: true})
+        // console.log("get user posts", res.data.posts)
+        this.setState({ posts: res.data.posts, displayedItems: [], startItem: 0, hasMore: true})
       )
       .catch(err => console.log(err));
 
@@ -32,14 +33,14 @@ class myFeed extends Component {
 
   deletePost = id => {
     API.deletePost(id)
-      .then(res => this.loadPosts())
+      .then(res => this.loadPosts(this.state.userId))
       .catch(err => console.log(err));
   };
 
   displayItems = () => {
     var chunkSize = 10;
 
-    console.log(this.state.posts);
+    console.log("display posts", this.state.posts);
     // console.log("displayItems");
     if(this.state.posts.length === 0)
       return;
