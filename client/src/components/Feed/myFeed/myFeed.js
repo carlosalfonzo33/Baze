@@ -5,6 +5,7 @@ import { ListItem } from "../../../components/List";
 import DeleteBtn from "../../DeleteBtn";
 import Feednav from "../../Feednav";
 import InfiniteScroll from 'react-infinite-scroller';
+import '../Feed.css';
 
 
 class myFeed extends Component {

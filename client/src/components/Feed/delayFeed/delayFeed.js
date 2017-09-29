@@ -4,6 +4,7 @@ import { Col, Row, Container } from "../../../components/Grid";
 import { ListItem } from "../../../components/List";
 import Feednav from "../../Feednav";
 import InfiniteScroll from 'react-infinite-scroller';
+import '../Feed.css';
 
 
 class delayFeed extends Component {
@@ -41,7 +42,7 @@ class delayFeed extends Component {
 
     postSelection.map(post => {
         this.state.displayedItems.push(
-          <ListItem key={post._id}>
+          <ListItem key={post._id} className="listItem">
           {post.station}
           <br />
           {post.comment}
