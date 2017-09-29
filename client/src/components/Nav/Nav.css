@@ -2,6 +2,7 @@ nav.navbar {
   margin-bottom: 0;
   background-color: #3584cd;
   border: none;
+  border-radius: 0;
 }
 
 .navbar a {

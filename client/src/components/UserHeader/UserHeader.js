@@ -31,8 +31,8 @@ class UserHeader extends Component {
         <UserHeaderContainer>
           <Row>
             <Col size="md-12">
+              <div><img src={this.state.userData.img} className="img-responsive header-img" alt={this.state.userData.name} /></div>
               <h1>Welcome, {this.state.userData.name}!</h1>
-              <div><img src={this.state.userData.img} className="img-responsive header-img" alt={this.state.userData.name} style={{height: "200px", float: "left", marginRight: "5px"}}/></div>
 
 
             </Col>
