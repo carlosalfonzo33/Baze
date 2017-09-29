@@ -33,5 +33,32 @@ export default {
   updateUser: function(id) {
     console.log("POSTS data to insert into users!", id);
     return axios.post("/api/users/update ", id);
+  },
+
+  //Signup-Login
+  signUp: function(data) {
+    console.log("signed up user");
+    return axios.post("/api/signup", data).then((res) => {
+      window.location = '/feed';
+    });
+    // if (data.email != '' && data.password != '') {
+    //   return axios.post("/signup", data).then((res) => {
+    //     window.location = '/feed';
+    //   });
+    // } else {
+    //   console.log('Must not be empty');
+    // }
+  },
+
+  login: function(data) {
+    console.log("logged in user")
+    return axios.post("/api/login", data);
+    // return axios.post("/login", data).then((res) => {
+    //   if (data.email === email && data.password === password) {
+    //     window.location = '/feed';
+    //   } else {
+    //     console.log('Login or password is incorrect');
+    //   };
+    // });
   }
 };
