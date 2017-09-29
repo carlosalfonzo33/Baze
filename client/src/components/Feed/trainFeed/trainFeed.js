@@ -4,7 +4,9 @@ import { Col, Row, Container } from "../../../components/Grid";
 import { ListItem } from "../../../components/List";
 import Feednav from "../../Feednav";
 import InfiniteScroll from 'react-infinite-scroller';
+import '../Feed.css';
 import Feed from "../Feed";
+
 
 
 class trainFeed extends Component {
