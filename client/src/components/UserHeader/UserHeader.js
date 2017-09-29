@@ -24,7 +24,7 @@ class Post extends Component {
         <Container fluid>
           <Row>
             <Col size="md-12">
-              <h1>{this.state.userId}</h1>
+              <h1>USER INFO</h1>
 
             </Col>
           </Row>
