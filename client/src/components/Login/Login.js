@@ -8,7 +8,7 @@ import './login.css';
 class Login extends Component {
 
   state = {
-    email: "",
+    name: "",
     password: ""
   };
 
@@ -21,7 +21,7 @@ class Login extends Component {
 
   handleFormSubmit = event => {
       event.preventDefault();
-      API.login({email: this.state.email, password: this.state.password})
+      API.login({email: this.state.name, password: this.state.password})
           .then(res => console.log('response', res))
           .catch(err => console.log(err));
   };
@@ -42,8 +42,8 @@ class Login extends Component {
               <div className="form-group">
               <input className="form-control"
                 type="text"
-                placeholder="Email"
-                name="email"
+                placeholder="Username"
+                name="name"
               >
               </input>
               </div>

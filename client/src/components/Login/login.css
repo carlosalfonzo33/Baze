@@ -1,6 +1,7 @@
 .login-container {
     max-width: 400px;
     margin: 20px auto;
+    padding: 0 10px;
 }
 
 .btn {
@@ -9,4 +10,5 @@
 
 h1 {
     font-size: 2em;
+    margin-bottom: 20px;
 }
