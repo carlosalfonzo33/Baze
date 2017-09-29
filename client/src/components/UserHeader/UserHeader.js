@@ -2,37 +2,47 @@ import React, { Component } from "react";
 import DeleteBtn from "../../components/DeleteBtn";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../../components/Grid";
+import { Col, Row, Container } from "../Grid";
+import UserHeaderContainer from "../UserHeaderContainer";
 
 
-class Post extends Component {
+class UserHeader extends Component {
   state = {
-    posts: [],
+    userData: [],
     userId: "59cd655cbd1d0402842ae948",
-    comment: "",
-    postType: "Train",
-    isAlert: false,
-    station: "12th St. Oakland City Center",
-    trainLine: "Pittsburg Bay Point - SFIA Millbrae",
-    fireRedirect: false
+
+  };
+
+  componentDidMount() {
+    this.getUserInfo();
+  }
+
+  getUserInfo = () => {
+    API.getUserPosts(this.state.userId)
+      .then(res => this.setState({ userData: res.data}))
+      .catch(err => console.log(err));
   };
 
   render() {
 
     return (
-      <Container>
-        <Container fluid>
+
+      <Container fluid>
+        <UserHeaderContainer>
           <Row>
             <Col size="md-12">
-              <h1>USER INFO</h1>
+              <h1>Welcome, {this.state.userData.name}!</h1>
+              <div><img src={this.state.userData.img} className="img-responsive header-img" alt={this.state.userData.name} style={{height: "200px", float: "left", marginRight: "5px"}}/></div>
+
 
             </Col>
           </Row>
-        </Container>
+        </UserHeaderContainer>
       </Container>
+
     );
   }
 
 }
 
-export default Post;
+export default UserHeader;

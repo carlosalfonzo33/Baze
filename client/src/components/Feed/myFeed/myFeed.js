@@ -10,6 +10,7 @@ import UserHeader from "../../UserHeader";
 
 class myFeed extends Component {
   state = {
+    id:"59cd655cbd1d0402842ae948",
     posts: [],
   };
 
@@ -19,8 +20,8 @@ class myFeed extends Component {
   }
 
   loadPosts = () => {
-    API.getPosts()
-      .then(res => this.setState({ posts: res.data}))
+    API.getUserPosts(this.state.id)
+      .then(res => this.setState({ posts: res.data.posts}))
       .catch(err => console.log(err));
   };
 

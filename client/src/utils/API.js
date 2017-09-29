@@ -9,7 +9,10 @@ export default {
   getUserPosts: function(id) {
     return axios.get("/api/users/" + id);
   },
-  // Queries Posts
+
+  // getUser: function(id) {
+  //   return axios.get("api/users/profile"+ id)
+  // },
   searchPost: function(query, begin, end) {
     return axios.get("https://api.nytimes.com/svc/search/v2/postsearch.json", {
       params: {
@@ -20,21 +23,17 @@ export default {
       }
     });
   },
-  // Deletes the Post with the given id
   deletePost: function(id) {
     return axios.delete("/api/posts/" + id);
   },
-  // Saves a Post to the database
   savePosts: function(postData) {
     console.log("ARTICLE SAVED", postData);
     return axios.post("/api/posts", postData);
   },
-
   updateUser: function(id) {
     console.log("POSTS data to insert into users!", id);
     return axios.post("/api/users/update ", id);
   },
-
   //Signup-Login
   signUp: function(data) {
     console.log("signed up user");
