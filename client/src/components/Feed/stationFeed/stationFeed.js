@@ -5,6 +5,8 @@ import { ListItem } from "../../../components/List";
 import Feednav from "../../Feednav";
 import InfiniteScroll from 'react-infinite-scroller';
 import '../Feed.css';
+import Feed from "../Feed";
+
 
 
 class stationFeed extends Component {
@@ -30,60 +32,11 @@ class stationFeed extends Component {
 
   };
 
-  displayItems = () => {
-    var chunkSize = 10;
 
-    console.log(this.state.posts);
-    // console.log("displayItems");
-    if(this.state.posts.length === 0)
-      return;
-    console.log(this.state.startItem);
-    var postSelection = this.state.posts.slice(this.state.startItem,this.state.startItem+chunkSize);
-
-    postSelection.map(post => {
-        this.state.displayedItems.push(
-          <ListItem key={post._id}>
-          {post.station}
-          <br />
-          {post.comment}
-          <br />
-          {post.date}
-          </ListItem>);
-      }
-
-    );
-
-    this.setState({
-      startItem: (this.state.startItem + chunkSize),
-      hasMore: (this.state.startItem < this.state.posts.length)
-    });
-  }
 
   render() {
-    console.log("render");
-
-    const loader = <div className="loader">Loading ...</div>;
-
     return (
-      <Container>
-        <Container fluid>
-          <Row>
-            <Col size="md-12">
-              <Feednav />
-              <InfiniteScroll
-                    pageStart={0}
-                    initialLoad={true}
-                    loadMore={this.displayItems}
-                    hasMore={this.state.hasMore}
-                    loader={loader}
-                    >
-                    {this.state.displayedItems}
-                </InfiniteScroll>
-            </Col>
-          </Row>
-        </Container>
-      </Container>
-
+      <Feed data={this.state.posts} />
     );
   }
 }

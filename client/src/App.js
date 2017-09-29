@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
-import Feed from "./components/Feed";
+import AllFeed from "./components/Feed/AllFeed";
 import myFeed from "./components/Feed/myFeed";
 import delayFeed from "./components/Feed/delayFeed";
 import stationFeed from "./components/Feed/stationFeed";
@@ -17,7 +17,7 @@ const App = () =>
       <Switch>
         <Route exact path="/" component={Login} />
         <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/feed" component={Feed} />
+        <Route exact path="/feed" component={AllFeed} />
         <Route exact path="/feed/delayfeed" component={delayFeed} />
         <Route exact path="/feed/myfeed" component={myFeed} />
         <Route exact path="/feed/station" component={stationFeed} />

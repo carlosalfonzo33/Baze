@@ -1,10 +1,30 @@
 import React, { Component } from "react";
 import { Container, Row } from "../Grid";
 import { Link, Redirect } from "react-router-dom";
+import API from "../../utils/API";
 import Nav from "../Nav";
 import './signup.css';
 
 class Login extends Component {
+
+  state = {
+    email: "",
+    password: ""
+  };
+
+  handleInputChange = event => {
+      const { name, value } = event.target;
+      this.setState({
+          [name]: value,
+      })
+  };
+
+  handleFormSubmit = event => {
+      event.preventDefault();
+      API.signUp({email: this.state.email, password: this.state.password})
+          .then(res => console.log('response', res))
+          .catch(err => console.log(err));
+  };
 
   render() {
     return (
@@ -17,10 +37,7 @@ class Login extends Component {
             <h1>
                 Signup
             </h1>
-            <form
-                action="/signup"
-                method="post"
-            >
+            <form>
               <div className="form-group">
               <input className="form-control"
                 type="text"
@@ -37,6 +54,7 @@ class Login extends Component {
               </input>
               <button className="btn btn-primary"
                 type='submit'
+                onClick={this.handleFormSubmit}
               >
                 Login
               </button>
