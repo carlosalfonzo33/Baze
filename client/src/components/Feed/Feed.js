@@ -5,6 +5,8 @@ import { ListItem } from "../../components/List";
 import Feednav from "../Feednav"
 import InfiniteScroll from 'react-infinite-scroller';
 import UserHeader from "../UserHeader";
+import DeleteBtn from "../DeleteBtn";
+
 
 
 class Feed extends Component {
@@ -15,8 +17,11 @@ class Feed extends Component {
   };
 
   props = {
-    data: []
+    data: [],
+    deleteable: false,
+    handleDelete: () => {},
   };
+
 
   displayItems = () => {
     var chunkSize = 10;
@@ -38,6 +43,8 @@ class Feed extends Component {
           {post.comment}
           <br />
           {post.date}
+          {this.props.deleteable && <DeleteBtn onClick={() => this.props.handleDelete(post._id)} />}
+
           </ListItem>);
       }
 
