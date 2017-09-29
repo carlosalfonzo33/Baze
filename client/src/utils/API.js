@@ -6,23 +6,22 @@ export default {
     return axios.get("/api/posts");
   },
 
+  getDelayPosts: function() {
+    return axios.get("/api/posts/delay");
+  },
+
+  getStationPosts: function() {
+    return axios.get("/api/posts/station");
+  },
+
+  getTrainPosts: function() {
+    return axios.get("/api/posts/train");
+  },
+
   getUserPosts: function(id) {
     return axios.get("/api/users/" + id);
   },
 
-  // getUser: function(id) {
-  //   return axios.get("api/users/profile"+ id)
-  // },
-  searchPost: function(query, begin, end) {
-    return axios.get("https://api.nytimes.com/svc/search/v2/postsearch.json", {
-      params: {
-        'api-key': "7e989fab4dfe40ab9a68b494a64c7fd3",
-        'q': query,
-        'begin_date': begin,
-        'end_date': end
-      }
-    });
-  },
   deletePost: function(id) {
     return axios.delete("/api/posts/" + id);
   },
