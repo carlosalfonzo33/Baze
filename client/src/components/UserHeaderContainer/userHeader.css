@@ -1,3 +1,16 @@
 .userHeaderContainer {
-  border: 1px solid black;
+  border: 1px solid #dddddd;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.header-img {
+  height: 150px;
+  float: left;
+  margin-right: 5px;
+}
+
+.userHeaderContainer h1 {
+  font-family: 'Galada', cursive;
+
 }
