@@ -23,7 +23,7 @@ class trainFeed extends Component {
   }
 
   loadPosts = () => {
-    API.getPosts()
+    API.getTrainPosts()
       .then(res =>
         // console.log(res.data)
         this.setState({ posts: res.data})

@@ -4,7 +4,31 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {
     db.Post
-      .find(req.query)
+      .find()
+      .populate("userId")
+      .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findDelayPosts: function(req, res) {
+    db.Post
+      .find({isAlert: true})
+      .populate("userId")
+      .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findStationPosts: function(req, res) {
+    db.Post
+      .find({postType: "Station"})
+      .populate("userId")
+      .sort({ date: -1 })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
+  findTrainPosts: function(req, res) {
+    db.Post
+      .find({postType: "Train"})
       .populate("userId")
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
