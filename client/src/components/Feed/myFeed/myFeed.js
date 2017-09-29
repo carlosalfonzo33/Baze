@@ -5,15 +5,14 @@ import { ListItem } from "../../../components/List";
 import DeleteBtn from "../../DeleteBtn";
 import Feednav from "../../Feednav";
 import InfiniteScroll from 'react-infinite-scroller';
+import Feed from "../Feed";
+import UserHeader from "../../UserHeader";
 
 
 class myFeed extends Component {
   state = {
     userId: "59cd655cbd1d0402842ae948",
     posts: [],
-    displayedItems: [],
-    startItem: 0,
-    hasMore: true
   };
 
   //when saved component loads, get the posts already saved to db
@@ -74,6 +73,7 @@ class myFeed extends Component {
 
     return (
       <Container>
+        <UserHeader />
         <Container fluid>
           <Row>
             <Col size="md-12">
