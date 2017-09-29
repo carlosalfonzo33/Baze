@@ -4,48 +4,47 @@ import { Col, Row, Container } from "../../components/Grid";
 import { ListItem } from "../../components/List";
 import Feednav from "../Feednav"
 import InfiniteScroll from 'react-infinite-scroller';
+import UserHeader from "../UserHeader";
+import DeleteBtn from "../DeleteBtn";
+
 
 
 class Feed extends Component {
   state = {
-    posts: [],
     displayedItems: [],
     startItem: 0,
     hasMore: true,
   };
 
-  //when saved component loads, get the posts already saved to db
-  componentDidMount() {
-    this.loadPosts();
-  }
-
-  loadPosts = () => {
-    API.getPosts()
-      .then(res => this.setState({ posts: res.data}))
-      .catch(err => console.log(err));
-
+  props = {
+    data: [],
+    deleteable: false,
+    handleDelete: () => {},
   };
+
 
   displayItems = () => {
     var chunkSize = 10;
 
-    console.log(this.state.posts);
+    console.log(this.props.data);
     // console.log("displayItems");
-    if(this.state.posts.length === 0)
+    if(this.props.data.length === 0)
       return;
     console.log(this.state.startItem);
-    var postSelection = this.state.posts.slice(this.state.startItem,this.state.startItem+chunkSize);
+    var postSelection = this.props.data.slice(this.state.startItem,this.state.startItem+chunkSize);
 
     postSelection.map(post => {
 
         this.state.displayedItems.push(
           <ListItem key={post._id}>
-          <div><img src={post.userId.img} className="img-responsive" alt={post.userId.name} style={{height: "50px", float: "left", marginRight: "5px"}}/></div>
+          <div><img src={post.userId.img} className="img-responsive feed-img" alt={post.userId.name} style={{height: "50px", float: "left", marginRight: "5px"}}/></div>
           {post.station}
           <br />
           {post.comment}
           <br />
           {post.date}
+          {this.props.deleteable && <DeleteBtn onClick={() => this.props.handleDelete(post._id)} />}
+
           </ListItem>);
       }
 
@@ -53,7 +52,7 @@ class Feed extends Component {
 
     this.setState({
       startItem: (this.state.startItem + chunkSize),
-      hasMore: (this.state.startItem < this.state.posts.length)
+      hasMore: (this.state.startItem < this.props.data.length)
     });
   }
 
@@ -64,6 +63,7 @@ class Feed extends Component {
 
     return (
       <Container>
+        <UserHeader />
         <Container fluid>
           <Row>
             <Col size="md-12">

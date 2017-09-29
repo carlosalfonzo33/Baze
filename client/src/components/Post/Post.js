@@ -7,6 +7,7 @@ import { List, ListItem } from "../../components/List";
 import { Input, FormBtn, Stationmenu, PostType, TrainLines } from "../../components/Form";
 import SaveBtn from "../SaveBtn";
 
+
 class Post extends Component {
   state = {
     posts: [],
