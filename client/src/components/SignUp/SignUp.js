@@ -5,9 +5,10 @@ import API from "../../utils/API";
 import Nav from "../Nav";
 import './signup.css';
 
-class Login extends Component {
+class SignUp extends Component {
 
   state = {
+    name: "",
     email: "",
     password: ""
   };
@@ -21,7 +22,7 @@ class Login extends Component {
 
   handleFormSubmit = event => {
       event.preventDefault();
-      API.signUp({email: this.state.email, password: this.state.password})
+      API.signUp({name: this.state.name, email: this.state.email, password: this.state.password})
           .then(res => console.log('response', res))
           .catch(err => console.log(err));
   };
@@ -33,25 +34,35 @@ class Login extends Component {
       <Container>
         <Row>
           <Nav />
-          <div className="login-container">
+          <div className="signup-container">
             <h1>
                 Signup
             </h1>
             <form>
               <div className="form-group">
-              <input className="form-control"
+                <input className="form-control"
                 type="text"
-                placeholder="Email"
-                name="email"
+                placeholder="Username"
+                name="name"
               >
               </input>
               </div>
-              <input className="form-control"
-                type="password"
-                placeholder="Password"
-                name="password"
-              >
+              <div className="form-group">
+                <input className="form-control"
+                  type="text"
+                  placeholder="Email"
+                  name="email"
+                >
               </input>
+              </div>
+              <div className="form-group">
+                <input className="form-control"
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                >
+                </input>
+              </div>
               <button className="btn btn-primary"
                 type='submit'
                 onClick={this.handleFormSubmit}
@@ -73,4 +84,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default SignUp;
