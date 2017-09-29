@@ -11,7 +11,7 @@ import SaveBtn from "../SaveBtn";
 class Post extends Component {
   state = {
     posts: [],
-    userId: "59cd655cbd1d0402842ae948",
+    userId: "59cd655cbd1d0402842ae94a",
     comment: "",
     postType: "Train",
     isAlert: false,
