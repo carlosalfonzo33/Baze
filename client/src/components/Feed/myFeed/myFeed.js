@@ -11,7 +11,8 @@ import UserHeader from "../../UserHeader";
 
 class myFeed extends Component {
   state = {
-    id:"59cf3b7f60e81e1bd612f7c1",
+    // id:"59cf3b7f60e81e1bd612f7c1",
+    id: window.localStorage.getItem('id') || '',
     posts: [],
   };
 
@@ -28,7 +29,7 @@ class myFeed extends Component {
 
   deletePost = id => {
     API.deletePost(id)
-      .then(res => this.loadPosts(this.state.userId))
+      .then(res => this.loadPosts())
       .catch(err => console.log(err));
   };
 

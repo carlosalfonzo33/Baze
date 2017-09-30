@@ -4,12 +4,25 @@ import { Link, Redirect } from "react-router-dom";
 import API from "../../utils/API";
 import Nav from "../Nav";
 import './login.css';
+import Wrapper from "../Wrapper";
 
 class Login extends Component {
 
   state = {
     name: "",
     password: ""
+  };
+
+  setSession = (name) => {
+    console.log("HIT");
+    API.login(name)
+    .then(res => {
+      window.localStorage.setItem('id', res.data[0]._id);
+
+      console.log('response', res.data[0]._id)
+
+    })
+    .catch(err => console.log(err));
   };
 
   handleInputChange = event => {
@@ -20,10 +33,10 @@ class Login extends Component {
   };
 
   handleFormSubmit = event => {
+    console.log("myprops", this.props)
       event.preventDefault();
-      API.login(this.state.name)
-          .then(res => console.log('response', res))
-          .catch(err => console.log(err));
+      this.setSession(this.state.name)
+
   };
 
 
