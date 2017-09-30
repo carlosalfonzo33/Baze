@@ -1,8 +1,9 @@
 .create-btn {
 	position: absolute;
-	top: 0;
+	top: 9px;
 	right: 0;
 	background: inherit;
 	border: none;
+	font-size: 25px;
 }
 
