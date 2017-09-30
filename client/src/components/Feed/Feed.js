@@ -37,7 +37,7 @@ class Feed extends Component {
 
         this.state.displayedItems.push(
           <ListItem key={post._id}>
-          <div><img src={post.userId.img} className="img-responsive feed-img" alt={post.userId.name} style={{height: "50px", float: "left", marginRight: "5px"}}/></div>
+          <div className="img-container"><img src={post.userId.img} className="img-responsive feed-img" alt={post.userId.name} style={{}}/></div>
           {post.station}
           <br />
           {post.comment}
