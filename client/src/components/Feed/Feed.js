@@ -6,6 +6,7 @@ import Feednav from "../Feednav"
 import InfiniteScroll from 'react-infinite-scroller';
 import UserHeader from "../UserHeader";
 import DeleteBtn from "../DeleteBtn";
+import Wrapper from "../Wrapper";
 
 
 
@@ -19,7 +20,7 @@ class Feed extends Component {
   props = {
     data: [],
     deleteable: false,
-    handleDelete: () => {},
+    handleDelete: () => {}
   };
 
 
@@ -76,7 +77,7 @@ class Feed extends Component {
                     loader={loader}
                     >
                     {this.state.displayedItems}
-                </InfiniteScroll>
+              </InfiniteScroll>
             </Col>
           </Row>
         </Container>
