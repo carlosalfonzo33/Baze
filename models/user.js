@@ -2,10 +2,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  name: { type: String, required: true},
-  email: { type: String, required: true},
+  name: { type: String, required: true, unique: true},
+  email: { type: String, required: true, unique: true},
   password: { type: String, required: true},
-  img: { type: String, default: "https://cdn.pixabay.com/photo/2013/07/13/12/07/avatar-159236_960_720.png" },
+  img: { type: String, default: "https://img.buzzfeed.com/buzzfeed-static/static/2015-05/20/13/campaign_images/webdr01/what-your-favorite-stock-photo-spaghetti-person-s-2-7471-1432142821-2_dblbig.jpg" },
   date: { type: Date, default: Date.now },
   posts: [{
     type: Schema.Types.ObjectId,

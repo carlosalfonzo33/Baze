@@ -21,8 +21,8 @@ class Login extends Component {
 
   handleFormSubmit = event => {
       event.preventDefault();
-      API.login({email: this.state.name, password: this.state.password})
-          .then(res => console.log('response', res))
+      API.login({name: this.state.name, password: this.state.password})
+          .then(res => console.log('response login', res))
           .catch(err => console.log(err));
   };
 
@@ -44,6 +44,8 @@ class Login extends Component {
                 type="text"
                 placeholder="Username"
                 name="name"
+                onChange={this.handleInputChange}
+
               >
               </input>
               </div>
@@ -51,6 +53,8 @@ class Login extends Component {
                 type="password"
                 placeholder="Password"
                 name="password"
+                onChange={this.handleInputChange}
+
               >
               </input>
               <button className="btn btn-primary"
@@ -61,7 +65,7 @@ class Login extends Component {
               </button>
               <hr />
               <p>
-                Need an account?&nbsp;&nbsp;&nbsp;&nbsp; 
+                Need an account?&nbsp;&nbsp;&nbsp;&nbsp;
                 <Link to="/signup">
                   Signup
                 </Link>

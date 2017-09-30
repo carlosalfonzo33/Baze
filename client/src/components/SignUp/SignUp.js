@@ -23,7 +23,7 @@ class SignUp extends Component {
   handleFormSubmit = event => {
       event.preventDefault();
       API.signUp({name: this.state.name, email: this.state.email, password: this.state.password})
-          .then(res => console.log('response', res))
+          .then(res => console.log('response signup', res))
           .catch(err => console.log(err));
   };
 
@@ -44,6 +44,7 @@ class SignUp extends Component {
                 type="text"
                 placeholder="Username"
                 name="name"
+                onChange={this.handleInputChange}
               >
               </input>
               </div>
@@ -52,6 +53,7 @@ class SignUp extends Component {
                   type="text"
                   placeholder="Email"
                   name="email"
+                  onChange={this.handleInputChange}
                 >
               </input>
               </div>
@@ -60,6 +62,7 @@ class SignUp extends Component {
                   type="password"
                   placeholder="Password"
                   name="password"
+                  onChange={this.handleInputChange}
                 >
                 </input>
               </div>
@@ -71,7 +74,7 @@ class SignUp extends Component {
               </button>
               <hr />
               <p>
-                Already have an account?&nbsp;&nbsp;&nbsp;&nbsp; 
+                Already have an account?&nbsp;&nbsp;&nbsp;&nbsp;
                 <Link to="/">
                   Login
                 </Link>
