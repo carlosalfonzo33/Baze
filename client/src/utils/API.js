@@ -21,9 +21,9 @@ export default {
   getUserPosts: function(id) {
     return axios.get("/api/users/" + id);
   },
-  login: function(data) {
-    console.log("logged in user", data)
-    return axios.get("/api/login", data);
+  login: function(name) {
+    console.log("logged in user", name)
+    return axios.get("/api/login/"+ name);
     // .then((res) => {
     //   window.location = '/feed';
     // });

@@ -9,6 +9,8 @@ import trainFeed from "./components/Feed/trainFeed";
 import Post from "./components/Post";
 import NoMatch from "./components/NoMatch";
 import SignUp from "./components/SignUp";
+import Wrapper from "./components/Wrapper";
+
 
 
 const App = () =>
