@@ -1,6 +1,5 @@
 const db = require("../models");
 
-// Defining methods for the UsersController
 module.exports = {
 
     findByName: function(req, res) {
