@@ -21,8 +21,8 @@ class Login extends Component {
 
   handleFormSubmit = event => {
       event.preventDefault();
-      API.login({name: this.state.name, password: this.state.password})
-          .then(res => console.log('response login', res))
+      API.login(this.state.name)
+          .then(res => console.log('response', res))
           .catch(err => console.log(err));
   };
 
