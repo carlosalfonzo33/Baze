@@ -5,6 +5,7 @@ import { Col, Row, Container } from "../Grid";
 import UserHeaderContainer from "../UserHeaderContainer";
 
 
+
 class UserHeader extends Component {
   state = {
     userData: [],
@@ -25,7 +26,6 @@ class UserHeader extends Component {
   render() {
     console.log("userheader", this.state.userData.img, this.state.userData.name, this.state.userId);
     return (
-
       <Container fluid>
         <UserHeaderContainer>
           <Row>

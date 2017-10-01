@@ -20,5 +20,13 @@
 }
 
 .station, .train, .station, .postType, .date {
-  font-size: 12px;
+  font-size: 14px;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
+
+.comment {
+	font-family: 'Marvel', sans-serif;
+
+}
+
+
