@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import API from "../../../utils/API";
-import '../Feed.css';
-import Feed from "../Feed";
+import API from "../../utils/API";
+import Feed from "./Feed";
 
 
 class delayFeed extends Component {

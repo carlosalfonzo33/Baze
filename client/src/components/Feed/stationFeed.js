@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import API from "../../../utils/API";
-import '../Feed.css';
-import Feed from "../Feed";
+import API from "../../utils/API";
+import Feed from "./Feed";
 
 
 
-class trainFeed extends Component {
+class stationFeed extends Component {
   state = {
     posts: [],
     displayedItems: [],
@@ -19,7 +18,7 @@ class trainFeed extends Component {
   }
 
   loadPosts = () => {
-    API.getTrainPosts()
+    API.getStationPosts()
       .then(res =>
         // console.log(res.data)
         this.setState({ posts: res.data})
@@ -29,6 +28,7 @@ class trainFeed extends Component {
   };
 
 
+
   render() {
     return (
       <Feed data={this.state.posts} />
@@ -36,4 +36,4 @@ class trainFeed extends Component {
   }
 }
 
-export default trainFeed;
+export default stationFeed;
