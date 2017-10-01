@@ -4,6 +4,7 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../Grid";
 import UserHeaderContainer from "../UserHeaderContainer";
+import "./userHeader.css";
 
 
 
@@ -32,7 +33,7 @@ class UserHeader extends Component {
           <Row>
             <Col size="md-12">
               <div><img src={this.state.userData.img} className="img-responsive header-img" alt={this.state.userData.name} /></div>
-              <h1>Welcome, {this.state.userData.name}!</h1>
+              <h1 className="welcome">Welcome, {this.state.userData.name}!</h1>
 
 
             </Col>
