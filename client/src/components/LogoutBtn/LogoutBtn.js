@@ -1,4 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./createPost.css";
+
+const CreatePost = props => (
+	<button className="create-btn" {...props}>
+       <Link to="/post"><i className="fa fa-pencil"></i></Link>
+	</button>
+	);
+
 import "./LogoutBtn.css";
 
 // The ...props means, spread all of the passed props onto this element
@@ -11,3 +20,4 @@ const LogoutBtn = props => (
 );
 
 export default LogoutBtn;
+

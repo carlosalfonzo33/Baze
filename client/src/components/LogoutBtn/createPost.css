@@ -1,0 +1,19 @@
+.create-btn {
+	position: absolute;
+	top: 9px;
+	right: 10px;
+	background: inherit;
+	border: none;
+	font-size: 25px;
+}
+
+@media only screen and (max-width: 600px)
+{
+	.create-btn
+
+	{
+
+	}
+}
+
+
