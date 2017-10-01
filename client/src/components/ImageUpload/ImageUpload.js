@@ -6,18 +6,21 @@ import Nav from "../Nav";
 import './imageupload.css';
 
 class ImageUpload extends Component {
+    state = {
+      file: ""
+    };
+
     constructor(props) {
       super(props);
-      this.state = {file: '',imagePreviewUrl: ''};
+      this.state = {file: '', imagePreviewUrl: ''};
     }
   
     _handleSubmit(e) {
       e.preventDefault();
-      // API.signUp({img: this.state.img})
-      //     .then(res => console.log('response signup', res))
-      //     .catch(err => console.log(err));
-      // TODO: do something with -> this.state.file
-      console.log('handle uploading-', this.state.file);
+      //in API.js
+      API.uploadImg({file: this.state.file})
+          .then(res => console.log('response img upload', res))
+          .catch(err => console.log(err));
     }
   
     _handleImageChange(e) {
@@ -53,7 +56,7 @@ class ImageUpload extends Component {
               onChange={(e)=>this._handleImageChange(e)} />
             <button className="btn btn-primary submitButton" 
               type="submit" 
-              onClick={(e)=>this._handleSubmit(e)}>Upload Image</button>
+              onClick={(e)=>this._handleSubmit(e)}>Upload Profile Picture</button>
           </form>
           <div className="imgPreview">
             {$imagePreview}

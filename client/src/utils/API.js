@@ -47,5 +47,14 @@ export default {
     .then((res) => {
       window.location = '/';
     });
+  },
+  //Image Upload {
+  uploadImg: function(image) {
+    console.log("uploaded image: ", image);
+    return axios.post("/api/signup", image)
+    .then((res) => {
+      alert('Image upload successful');
+    });
   }
+
 };
