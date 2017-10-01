@@ -16,3 +16,9 @@ nav.navbar.navbar-default {
 .nav>li>a:hover {
   background-color: #56aaca;
 }
+
+.navbar-toggle {
+	margin-right: 56px !important;
+}
+
+
