@@ -38,14 +38,26 @@ class Feed extends Component {
 
         this.state.displayedItems.push(
           <ListItem key={post._id}>
-          <div className="img-container"><img src={post.userId.img} className="img-responsive feed-img" alt={post.userId.name} style={{}}/></div>
-          {post.station}
+          <Container>
+          <Row>
+          <Col size="md-2">
+          <div className="name-img">
+            <div className="img-container"><img src={post.userId.img} className="img-responsive feed-img" alt={post.userId.name} style={{}}/></div>
+            <div className="username">{post.userId.name} </div>
+          </div>
+          </Col>
+          <Col size="md-10">
+          <div className="comment">{post.comment}</div>
           <br />
-          {post.comment}
-          <br />
-          {post.date}
+          <div className="station">Station: {post.station}</div>
+          <div className="train">Line: {post.trainLine}</div>
+          <div className="postType">Post Type: {post.postType}</div>
+          <div className="date">{post.date}</div>
+          </Col>
           {this.props.deleteable && <DeleteBtn onClick={() => this.props.handleDelete(post._id)} />}
 
+          </Row>
+          </Container>
           </ListItem>);
       }
 

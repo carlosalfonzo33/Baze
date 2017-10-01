@@ -19,15 +19,11 @@ class Login extends Component {
     .then(res => {
       window.localStorage.setItem('id', res.data[0]._id);
       console.log('response', res.data[0])
-      if (res.data[0].password === this.state.password) {
-        window.location.href = '/feed';
-      } else if (res.data[0] === undefined) {
-          alert('');
+      if ((res.data[0].name !== this.state.name) || (res.data[0].password !== this.state.password)) {
+        alert('Your username or password were not a match');
       } else {
-          alert('Your password is incorrect');
+        window.location.href = '/feed';
       }
-      // validatePassword(password);
-
     })
     .catch(err => console.log(err));
   };
