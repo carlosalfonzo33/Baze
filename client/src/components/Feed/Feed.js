@@ -46,15 +46,16 @@ class Feed extends Component {
             <div className="username">{post.userId.name} </div>
           </div>
           </Col>
-          <Col size="md-10">
+          <Col size="md-9">
           <div className="comment">{post.comment}</div>
           <br />
           <div className="station">Station: {post.station}</div>
           <div className="train">Line: {post.trainLine}</div>
           <div className="postType">Post Type: {post.postType}</div>
           <div className="date">{post.date}</div>
-          </Col>
           {this.props.deleteable && <DeleteBtn onClick={() => this.props.handleDelete(post._id)} />}
+
+          </Col>
 
           </Row>
           </Container>
