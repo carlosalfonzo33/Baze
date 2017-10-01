@@ -18,12 +18,25 @@ class Login extends Component {
     API.login(name)
     .then(res => {
       window.localStorage.setItem('id', res.data[0]._id);
-
-      console.log('response', res.data[0]._id)
+      console.log('response', res.data[0])
+      if (res.data[0].password === this.state.password) {
+        window.location.href = '/feed';
+      } else if (res.data[0] === undefined) {
+          alert('');
+      } else {
+          alert('Your password is incorrect');
+      }
+      // validatePassword(password);
 
     })
     .catch(err => console.log(err));
   };
+
+  // validatePassword = (password) => {
+  //   if (res.data[0].password === this.state.password) {
+  //     window.location.href = '/feed';
+  //   }
+  // }
 
   handleInputChange = event => {
       const { name, value } = event.target;
