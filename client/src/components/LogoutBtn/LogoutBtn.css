@@ -8,6 +8,32 @@
 	color: white;
 }
 
+@media only screen and (max-width: 360px)
+{
+	.logout-btn
+
+	{
+		right: 110px;
+	}
+}
+
+@media only screen and (max-width: 412px)
+{
+	.logout-btn
+
+	{
+		right: 110px;
+	}
+}
+
+@media only screen and (max-width: 414px)
+{
+	.logout-btn
+
+	{
+		right: 110px;
+	}
+}
 
 
 
