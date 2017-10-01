@@ -1,9 +1,7 @@
 
 .list-group-item {
-
-font-family: 'Playfair Display SC', serif;
-
 }
+
 
 .feed-img {
   max-height: 100%;
@@ -11,8 +9,16 @@ font-family: 'Playfair Display SC', serif;
 }
 
 .img-container {
-  float: left;
-  height: 70px;
-  width: 70px;
+  width: 80px;
   margin-right: 10px;
+}
+
+.username {
+  font-family: 'Playfair Display SC', serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.station, .train, .station, .postType, .date {
+  font-size: 12px;
 }

@@ -13,6 +13,11 @@ nav.navbar.navbar-default {
   color: white;
 }
 
+.navbar-default .navbar-nav>.active>a, {
+  background-color: #56aaca;
+
+}
+
 .nav>li>a:hover {
   background-color: #56aaca;
 }
@@ -20,5 +25,3 @@ nav.navbar.navbar-default {
 .navbar-toggle {
 	margin-right: 56px !important;
 }
-
-
