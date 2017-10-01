@@ -5,4 +5,7 @@ const signupController = require("../../controllers/signupController");
 router.route("/")
   .post(signupController.create);
 
+router.route("/")
+  .post(signupController.uploadImg);
+
 module.exports = router;
