@@ -5,9 +5,17 @@ import CreatePost from '../CreatePost';
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = props =>
-  <nav className="navbar">
+  <nav className="nav navbar navbar-default" role="navigation">
     <div className="container-fluid">
       <div className="navbar-header">
+       <button className="navbar-toggle collapsed"
+                      type="button" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1">
+                <span className="sr-only">Toggle navigation</span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+               </button>
         <Link className="navbar-brand" to="/feed">
           Bart Feed
         </Link>
