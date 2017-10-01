@@ -49,7 +49,6 @@ class Feed extends Component {
           <div className="postType">Post Type: {post.postType}</div>
           <div className="date">{post.date}</div>
 
-          {this.props.deleteable && <DeleteBtn onClick={() => this.props.handleDelete(post._id)} />}
           </Col>
 
           </Row>
