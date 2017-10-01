@@ -57,6 +57,8 @@ class Feed extends Component {
           </Col>
           
 
+          </Col>
+
           </Row>
           </Container>
           </ListItem>);
