@@ -3,6 +3,7 @@ import { Container, Row } from "../Grid";
 import { Link, Redirect } from "react-router-dom";
 import API from "../../utils/API";
 import Nav from "../Nav";
+import ImageUpload from "../ImageUpload";
 import './signup.css';
 
 class SignUp extends Component {
@@ -66,11 +67,14 @@ class SignUp extends Component {
                 >
                 </input>
               </div>
+              <div className="form-group">
+                <ImageUpload />
+              </div>
               <button className="btn btn-primary"
                 type='submit'
                 onClick={this.handleFormSubmit}
               >
-                Login
+                Sign Up
               </button>
               <hr />
               <p>
