@@ -1,10 +1,5 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-import { Col, Row, Container } from "../../components/Grid";
-import { ListItem } from "../../components/List";
-import Feednav from "../Feednav"
-import InfiniteScroll from 'react-infinite-scroller';
-import UserHeader from "../UserHeader";
 import Feed from "./Feed";
 
 

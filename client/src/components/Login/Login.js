@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { Container, Row } from "../Grid";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import Nav from "../Nav";
 import './login.css';
-import Wrapper from "../Wrapper";
 
 class Login extends Component {
 

@@ -1,12 +1,9 @@
 import React, { Component } from "react";
-import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { ListItem } from "../../components/List";
 import Feednav from "../Feednav"
 import InfiniteScroll from 'react-infinite-scroller';
 import UserHeader from "../UserHeader";
-import DeleteBtn from "../DeleteBtn";
-import Wrapper from "../Wrapper";
 
 
 
@@ -19,8 +16,6 @@ class Feed extends Component {
 
   props = {
     data: [],
-    deleteable: false,
-    handleDelete: () => {}
   };
 
 
@@ -53,6 +48,7 @@ class Feed extends Component {
           <div className="train">Line: {post.trainLine}</div>
           <div className="postType">Post Type: {post.postType}</div>
           <div className="date">{post.date}</div>
+
           {this.props.deleteable && <DeleteBtn onClick={() => this.props.handleDelete(post._id)} />}
           </Col>
 
