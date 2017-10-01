@@ -10,7 +10,7 @@ const Navbar = props =>
       <div className="navbar-header">
        <button className="navbar-toggle collapsed"
                       type="button" data-toggle="collapse"
-                data-target="#bs-example-navbar-collapse-1">
+                data-target="#feedNav">
                 <span className="sr-only">Toggle navigation</span>
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
