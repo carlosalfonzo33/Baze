@@ -16,7 +16,7 @@ class delayFeed extends Component {
   //when saved component loads, get the posts already saved to db
   componentDidMount() {
     this.loadPosts();
-  }
+  };
 
   loadPosts = () => {
     API.getDelayPosts()

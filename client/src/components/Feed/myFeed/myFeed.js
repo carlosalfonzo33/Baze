@@ -11,19 +11,20 @@ import UserHeader from "../../UserHeader";
 
 class myFeed extends Component {
   state = {
-    // id:"59cf3b7f60e81e1bd612f7c1",
-    id: window.localStorage.getItem('id') || '',
     posts: [],
+    id: window.localStorage.getItem('id') || '',
+
   };
 
   //when saved component loads, get the posts already saved to db
   componentDidMount() {
     this.loadPosts();
-  }
+  };
 
   loadPosts = () => {
+    console.log("from myfeed - loadPosts", this.state.id);
     API.getUserPosts(this.state.id)
-      .then(res => this.setState({ posts: res.data.posts}))
+      .then(res => this.setState({ posts: res.data.posts }))
       .catch(err => console.log(err));
   };
 
