@@ -24,7 +24,7 @@ class UserHeader extends Component {
   };
 
   render() {
-
+    console.log("userheader", this.state.userData.img, this.state.userData.name, this.state.userId);
     return (
 
       <Container fluid>

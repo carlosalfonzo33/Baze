@@ -1,1 +1,2 @@
-export { default } from "./CreatePost";
+export { default } from "./LogoutBtn";
+
