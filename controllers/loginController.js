@@ -2,11 +2,11 @@ const db = require("../models");
 
 module.exports = {
 
-  findByName: function(req, res) {
+  lookupUser: function(req, res) {
     db.User
-      .findByName(req.params.name, req.params.password)
+      .find({name: req.params.name})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  },
+  }
 
 };

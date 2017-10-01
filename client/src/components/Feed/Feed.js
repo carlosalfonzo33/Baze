@@ -6,6 +6,7 @@ import Feednav from "../Feednav"
 import InfiniteScroll from 'react-infinite-scroller';
 import UserHeader from "../UserHeader";
 import DeleteBtn from "../DeleteBtn";
+import Wrapper from "../Wrapper";
 
 
 
@@ -19,7 +20,7 @@ class Feed extends Component {
   props = {
     data: [],
     deleteable: false,
-    handleDelete: () => {},
+    handleDelete: () => {}
   };
 
 
@@ -37,7 +38,7 @@ class Feed extends Component {
 
         this.state.displayedItems.push(
           <ListItem key={post._id}>
-          <div><img src={post.userId.img} className="img-responsive feed-img" alt={post.userId.name} style={{height: "50px", float: "left", marginRight: "5px"}}/></div>
+          <div className="img-container"><img src={post.userId.img} className="img-responsive feed-img" alt={post.userId.name} style={{}}/></div>
           {post.station}
           <br />
           {post.comment}
@@ -76,7 +77,7 @@ class Feed extends Component {
                     loader={loader}
                     >
                     {this.state.displayedItems}
-                </InfiniteScroll>
+              </InfiniteScroll>
             </Col>
           </Row>
         </Container>

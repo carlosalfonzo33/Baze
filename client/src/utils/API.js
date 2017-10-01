@@ -21,6 +21,20 @@ export default {
   getUserPosts: function(id) {
     return axios.get("/api/users/" + id);
   },
+  login: function(name) {
+    console.log("logged in user", name)
+    return axios.get("/api/login/"+ name);
+    // .then((res) => {
+    //   window.location = '/feed';
+    // });
+    // return axios.post("/login", data).then((res) => {
+    //   if (data.email === email && data.password === password) {
+    //     window.location = '/feed';
+    //   } else {
+    //     console.log('Login or password is incorrect');
+    //   };
+    // });
+  },
 
   deletePost: function(id) {
     return axios.delete("/api/posts/" + id);
@@ -35,9 +49,10 @@ export default {
   },
   //Signup-Login
   signUp: function(data) {
-    console.log("signed up user");
-    return axios.post("/api/signup", data).then((res) => {
-      window.location = '/feed';
+    console.log("signed up user", data);
+    return axios.post("/api/signup", data)
+    .then((res) => {
+      window.location = '/';
     });
     // if (data.email != '' && data.password != '') {
     //   return axios.post("/signup", data).then((res) => {
@@ -46,17 +61,7 @@ export default {
     // } else {
     //   console.log('Must not be empty');
     // }
-  },
-
-  login: function(data) {
-    console.log("logged in user")
-    return axios.post("/api/login", data);
-    // return axios.post("/login", data).then((res) => {
-    //   if (data.email === email && data.password === password) {
-    //     window.location = '/feed';
-    //   } else {
-    //     console.log('Login or password is incorrect');
-    //   };
-    // });
   }
+
+
 };

@@ -9,13 +9,16 @@ import trainFeed from "./components/Feed/trainFeed";
 import Post from "./components/Post";
 import NoMatch from "./components/NoMatch";
 import SignUp from "./components/SignUp";
+import Wrapper from "./components/Wrapper";
 
 
-const App = () =>
-  <Router>
+
+const App = () => {
+
+  return(<Router>
     <div>
       <Switch>
-        <Route exact path="/" component={Login} />
+        <Route exact path="/" component={Login}  />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/feed" component={AllFeed} />
         <Route exact path="/feed/delayfeed" component={delayFeed} />
@@ -23,9 +26,11 @@ const App = () =>
         <Route exact path="/feed/station" component={stationFeed} />
         <Route exact path="/feed/train" component={trainFeed} />
         <Route exact path="/post" component={Post} />
+      
         <Route component={NoMatch} />
       </Switch>
     </div>
-  </Router>;
+  </Router>);
+}
 
 export default App;

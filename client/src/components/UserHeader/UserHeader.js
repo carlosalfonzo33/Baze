@@ -9,7 +9,7 @@ import UserHeaderContainer from "../UserHeaderContainer";
 class UserHeader extends Component {
   state = {
     userData: [],
-    userId: "59cd655cbd1d0402842ae948",
+    userId: window.localStorage.getItem('id') || '',
 
   };
 

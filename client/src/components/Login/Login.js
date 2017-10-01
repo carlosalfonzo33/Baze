@@ -4,12 +4,25 @@ import { Link, Redirect } from "react-router-dom";
 import API from "../../utils/API";
 import Nav from "../Nav";
 import './login.css';
+import Wrapper from "../Wrapper";
 
 class Login extends Component {
 
   state = {
     name: "",
     password: ""
+  };
+
+  setSession = (name) => {
+    console.log("HIT");
+    API.login(name)
+    .then(res => {
+      window.localStorage.setItem('id', res.data[0]._id);
+
+      console.log('response', res.data[0]._id)
+
+    })
+    .catch(err => console.log(err));
   };
 
   handleInputChange = event => {
@@ -20,10 +33,10 @@ class Login extends Component {
   };
 
   handleFormSubmit = event => {
+    console.log("myprops", this.props)
       event.preventDefault();
-      API.login({email: this.state.name, password: this.state.password})
-          .then(res => console.log('response', res))
-          .catch(err => console.log(err));
+      this.setSession(this.state.name)
+
   };
 
 
@@ -44,6 +57,8 @@ class Login extends Component {
                 type="text"
                 placeholder="Username"
                 name="name"
+                onChange={this.handleInputChange}
+
               >
               </input>
               </div>
@@ -51,6 +66,8 @@ class Login extends Component {
                 type="password"
                 placeholder="Password"
                 name="password"
+                onChange={this.handleInputChange}
+
               >
               </input>
               <button className="btn btn-primary"
@@ -61,7 +78,7 @@ class Login extends Component {
               </button>
               <hr />
               <p>
-                Need an account?&nbsp;&nbsp;&nbsp;&nbsp; 
+                Need an account?&nbsp;&nbsp;&nbsp;&nbsp;
                 <Link to="/signup">
                   Signup
                 </Link>

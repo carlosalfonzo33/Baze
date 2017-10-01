@@ -5,5 +5,14 @@ font-family: 'Playfair Display SC', serif;
 
 }
 
+.feed-img {
+  max-height: 100%;
+  max-width: 100%;
+}
 
-
+.img-container {
+  float: left;
+  height: 70px;
+  width: 70px;
+  margin-right: 10px;
+}
