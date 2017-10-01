@@ -9,7 +9,6 @@ import trainFeed from "./components/Feed/trainFeed";
 import Post from "./components/Post";
 import NoMatch from "./components/NoMatch";
 import SignUp from "./components/SignUp";
-import Wrapper from "./components/Wrapper";
 
 
 
@@ -26,7 +25,7 @@ const App = () => {
         <Route exact path="/feed/station" component={stationFeed} />
         <Route exact path="/feed/train" component={trainFeed} />
         <Route exact path="/post" component={Post} />
-      
+
         <Route component={NoMatch} />
       </Switch>
     </div>

@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-import DeleteBtn from "../../components/DeleteBtn";
 import API from "../../utils/API";
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input, FormBtn, Stationmenu, PostType, TrainLines } from "../../components/Form";
-import SaveBtn from "../SaveBtn";
+import { FormBtn, Stationmenu, PostType, TrainLines } from "../../components/Form";
 
 
 class Post extends Component {
