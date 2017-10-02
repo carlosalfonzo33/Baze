@@ -37,12 +37,13 @@ class Feed extends Component {
           <Row>
           <Col size="md-2">
           <div>
-            <div className="img-container"><img src={post.userId.file || post.userId.img} className="img-responsive feed-img" alt={post.userId.name} style={{}}/></div>
+            <div className="img-container"><img src={post.userId.file || post.userId.img} className="img-responsive feed-img" alt={post.userId.name}/></div>
             <div className="username">{post.userId.name} </div>
           </div>
           </Col>
           <Col size="md-9">
-          <div className="comment">{post.comment}</div>
+          <div className="photo"><img src={post.photo || ""} className="img-responsive post-img"/></div>
+          <div className="comment">{post.comment || ""}</div>
           <br />
           <div className="station">Station: {post.station}</div>
           <div className="train">Line: {post.trainLine}</div>

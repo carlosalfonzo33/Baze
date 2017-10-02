@@ -10,11 +10,13 @@ class Post extends Component {
     posts: [],
     userId: window.localStorage.getItem('id') || '',
     comment: "",
+    photo: "",
     postType: "Train",
     isAlert: false,
     station: "12th St. Oakland City Center",
     trainLine: "Pittsburg Bay Point - SFIA Millbrae",
-    fireRedirect: false
+    fireRedirect: false,
+    file: "",
   };
 
   handleInputChange = event => {
@@ -24,12 +26,29 @@ class Post extends Component {
     });
   };
 
+  handleImageChange = event => {
+    event.preventDefault();
+
+    let reader = new FileReader();
+    let file = event.target.files[0];
+
+    reader.onloadend = () => {
+      this.setState({
+        file: file,
+        photo: reader.result
+      });
+    }
+
+    reader.readAsDataURL(file)
+  };
+
   handleFormSubmit = event => {
     // When the form is submitted, prevent its default behavior, get posts and update the posts state
     event.preventDefault();
     API.savePosts(
       { userId: this.state.userId,
         comment: this.state.comment,
+        photo: this.state.photo,
         postType: this.state.postType,
         isAlert: this.state.isAlert,
         station: this.state.station,
@@ -38,6 +57,7 @@ class Post extends Component {
       .then(res => this.updateUserPosts(res), this.setState(
         { posts: [],
           comment: "",
+          photo: "",
           postType: "Train",
           isAlert: false,
           station: "12th St. Oakland City Center",
@@ -57,6 +77,14 @@ class Post extends Component {
 
   render() {
     const { fireRedirect } = this.state
+    let imagePreviewUrl = this.state.photo;
+    // console.log("img preview url", imagePreviewUrl);
+    let $imagePreview = null;
+    if (imagePreviewUrl) {
+      $imagePreview = (<img className="previewImg" src={imagePreviewUrl} />);
+    } else {
+      $imagePreview = (<div className="previewText"></div>);
+    }
 
     return (
       <Container>
@@ -115,6 +143,19 @@ class Post extends Component {
                     onChange={this.handleInputChange}
                   />
                 </label>
+                <label>
+                  Upload Image:
+                  <div className="form-group">
+                    <input className="fileInput form-control-file"
+                       type="file"
+                       onChange={this.handleImageChange} />
+
+
+                     <div className="imgPreview">
+                      {$imagePreview}
+                     </div>
+                   </div>
+                 </label>
                 <br />
                 <FormBtn
                   disabled={!(this.state.comment)}
