@@ -16,15 +16,19 @@ class Login extends Component {
     console.log("HIT");
     API.login(name)
     .then(res => {
-      window.localStorage.setItem('id', res.data[0]._id);
-      console.log('response', res.data[0])
-      if ((res.data[0].name !== this.state.name) || (res.data[0].password !== this.state.password)) {
-        alert('Your username or password were not a match');
+      console.log('response', res)
+      if(res.data.length) {
+        if (res.data[0].password !== this.state.password) {
+          alert('Incorrect Password');
+        } else {
+          window.localStorage.setItem('id', res.data[0]._id);
+          window.location.href = '/feed';
+        }
       } else {
-        window.location.href = '/feed';
+        alert('Username not found');
       }
     })
-    .catch(err => console.log(err));
+    .catch(err => console.log("login error", err));
   };
 
   // validatePassword = (password) => {
