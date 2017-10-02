@@ -35,7 +35,7 @@ export default {
     console.log("ARTICLE SAVED", postData);
     return axios.post("/api/posts", postData);
   },
-  
+
   updateUser: function(id) {
     console.log("POSTS data to insert into users!", id);
     return axios.post("/api/users/update ", id);
@@ -45,15 +45,8 @@ export default {
     console.log("signed up user", data);
     return axios.post("/api/signup", data)
     .then((res) => {
-      window.location = '/';
-    });
-  },
-  //Image Upload {
-  uploadImg: function(image) {
-    console.log("uploaded image: ", image);
-    return axios.post("/api/signup", image)
-    .then((res) => {
-      alert('Image upload successful');
+      console.log("res API signup", res);
+      // window.location = '/';
     });
   }
 

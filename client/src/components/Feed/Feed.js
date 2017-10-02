@@ -4,7 +4,7 @@ import { ListItem } from "../../components/List";
 import Feednav from "../Feednav"
 import InfiniteScroll from 'react-infinite-scroller';
 import UserHeader from "../UserHeader";
-
+import "./Feed.css";
 
 
 class Feed extends Component {
@@ -36,8 +36,8 @@ class Feed extends Component {
           <Container>
           <Row>
           <Col size="md-2">
-          <div className="name-img">
-            <div className="img-container"><img src={post.userId.img} className="img-responsive feed-img" alt={post.userId.name} style={{}}/></div>
+          <div>
+            <div className="img-container"><img src={post.userId.file || post.userId.img} className="img-responsive feed-img" alt={post.userId.name} style={{}}/></div>
             <div className="username">{post.userId.name} </div>
           </div>
           </Col>

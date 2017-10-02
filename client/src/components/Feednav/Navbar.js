@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import CreatePost from '../CreatePost';
-
+import "../Nav/Nav.css";
 import LogoutBtn from "../LogoutBtn";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item

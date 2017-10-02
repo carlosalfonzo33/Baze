@@ -6,6 +6,7 @@ import Feednav from "../Feednav";
 import InfiniteScroll from 'react-infinite-scroller';
 import UserHeader from "../UserHeader";
 import DeleteBtn from "../DeleteBtn";
+import "./Feed.css";
 
 
 class myFeed extends Component {
@@ -51,7 +52,7 @@ class myFeed extends Component {
             <Row>
               <Col size="md-2">
                 <div className="name-img">
-                  <div className="img-container"><img src={this.state.posts.img} className="img-responsive feed-img" alt={this.state.posts.name} /></div>
+                  <div className="img-container"><img src={this.state.posts.file || this.state.posts.img} className="img-responsive feed-img" alt={this.state.posts.name} /></div>
                   <div className="username">{this.state.posts.name} </div>
                 </div>
               </Col>

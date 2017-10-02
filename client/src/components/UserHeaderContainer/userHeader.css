@@ -5,10 +5,10 @@
 }
 
 .header-img {
-  height: 150px;
+  max-height: 150px;
   width: auto;
   float: left;
-  margin-right: 5px;
+  margin: 5px;
 }
 
 .userHeaderContainer h1 {
