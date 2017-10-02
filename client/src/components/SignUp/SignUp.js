@@ -11,7 +11,14 @@ class SignUp extends Component {
   state = {
     name: "",
     email: "",
-    password: ""
+    password: "",
+    file: "",
+    imagePreviewUrl: ""
+
+  };
+
+  props = {
+    uploadedImg: [],
   };
 
   handleInputChange = event => {
@@ -21,14 +28,39 @@ class SignUp extends Component {
       })
   };
 
+  handleImageChange = event => {
+    event.preventDefault();
+
+    let reader = new FileReader();
+    let file = event.target.files[0];
+
+    reader.onloadend = () => {
+      this.setState({
+        file: file,
+        imagePreviewUrl: reader.result
+      });
+    }
+
+    reader.readAsDataURL(file)
+  };
+
   handleFormSubmit = event => {
       event.preventDefault();
-      API.signUp({name: this.state.name, email: this.state.email, password: this.state.password})
+      API.signUp({name: this.state.name, email: this.state.email, password: this.state.password, file: this.state.imagePreviewUrl})
           .then(res => console.log('response signup', res))
           .catch(err => console.log(err));
   };
 
   render() {
+    let imagePreviewUrl = this.state.imagePreviewUrl;
+    // console.log("img preview url", imagePreviewUrl);
+    let $imagePreview = null;
+    if (imagePreviewUrl) {
+      $imagePreview = (<img className="previewImg" src={imagePreviewUrl} />);
+    } else {
+      $imagePreview = (<div className="previewText"></div>);
+    }
+
     return (
 
 
@@ -68,14 +100,21 @@ class SignUp extends Component {
                 </input>
               </div>
               <div className="form-group">
-                <ImageUpload />
+              <input className="fileInput form-control-file"
+                 type="file"
+                 onChange={this.handleImageChange} />
+
+
+               <div className="imgPreview">
+                {$imagePreview}
+               </div>
               </div>
-              <button className="btn btn-primary"
+                <button className="btn btn-primary"
                 type='submit'
                 onClick={this.handleFormSubmit}
-              >
+                >
                 Sign Up
-              </button>
+                </button>
               <hr />
               <p>
                 Already have an account?&nbsp;&nbsp;&nbsp;&nbsp;

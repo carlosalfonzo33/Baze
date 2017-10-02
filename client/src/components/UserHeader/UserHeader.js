@@ -25,13 +25,13 @@ class UserHeader extends Component {
   };
 
   render() {
-    console.log("userheader", this.state.userData.img, this.state.userData.name, this.state.userId);
+    // console.log("userheader", this.state.userData.img, this.state.userData.name, this.state.userId);
     return (
       <Container fluid>
         <UserHeaderContainer>
           <Row>
             <Col size="md-12">
-              <div><img src={this.state.userData.img} className="img-responsive header-img" alt={this.state.userData.name} /></div>
+              <div><img src={this.state.userData.file || this.state.userData.img} className="img-responsive header-img" alt={this.state.userData.name} /></div>
               <h1 className="welcome">Welcome, {this.state.userData.name}!</h1>
 
 
