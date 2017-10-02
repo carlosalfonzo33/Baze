@@ -5,6 +5,8 @@ import Feednav from "../Feednav"
 import InfiniteScroll from 'react-infinite-scroller';
 import UserHeader from "../UserHeader";
 import "./Feed.css";
+import CreatePost from '../CreatePost';
+
 
 
 class Feed extends Component {
@@ -41,16 +43,15 @@ class Feed extends Component {
             <div className="username">{post.userId.name} </div>
           </div>
           </Col>
-          <Col size="md-9">
+          <Col size="md-10">
           <div className="photo"><img src={post.photo || ""} className="img-responsive post-img"/></div>
           <div className="comment">{post.comment || ""}</div>
           <br />
-          <div className="station">Station: {post.station}</div>
-          <div className="train">Line: {post.trainLine}</div>
-          <div className="postType">Post Type: {post.postType}</div>
-          <div className="date">{post.date}</div>
+          <div className="station">Station: {post.station} / Line: {post.trainLine}</div>
+          <div className="postType">Post Type: {post.postType} / Date: {post.date}</div>
 
           </Col>
+
 
           </Row>
           </Container>
@@ -77,6 +78,7 @@ class Feed extends Component {
           <Row>
             <Col size="md-12">
               <Feednav />
+
               <InfiniteScroll
                     pageStart={0}
                     initialLoad={true}
