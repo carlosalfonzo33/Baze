@@ -87,13 +87,13 @@ class myFeed extends Component {
             <Col size="md-12">
               <Feednav />
               <InfiniteScroll
-                    pageStart={0}
-                    initialLoad={true}
-                    loadMore={this.displayItems}
-                    hasMore={this.state.hasMore}
-                    loader={loader}
-                    >
-                    {this.state.displayedItems}
+                pageStart={0}
+                initialLoad={true}
+                loadMore={this.displayItems}
+                hasMore={this.state.hasMore}
+                loader={loader}
+                >
+                {this.state.displayedItems}
               </InfiniteScroll>
             </Col>
           </Row>
