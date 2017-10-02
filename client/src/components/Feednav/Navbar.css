@@ -6,7 +6,8 @@ nav.navbar {
 }
 
 .navbar-default .navbar-nav>li>a {
-  color: #ace0f7;
+  color: black ;
+  font-family: 'Anton', sans-serif;
 }
 
 .navbar-default .navbar-nav>.active>a  {
@@ -22,7 +23,8 @@ nav.navbar {
   background: #90b6e6;
 }
 .navbar-default .navbar-brand {
-    color: white;
+    color: black;
+    font-family: 'Anton', sans-serif;
 }
 
 .navbar-toggle {
