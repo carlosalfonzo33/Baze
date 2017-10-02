@@ -46,7 +46,7 @@ export default {
     return axios.post("/api/signup", data)
     .then((res) => {
       // console.log("res API signup", res);
-      window.location = '/';
+      window.location = '/login';
     });
   }
 

@@ -118,7 +118,7 @@ class SignUp extends Component {
               <hr />
               <p>
                 Already have an account?&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link to="/">
+                <Link to="/login">
                   Login
                 </Link>
               </p>

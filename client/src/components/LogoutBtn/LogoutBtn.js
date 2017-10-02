@@ -4,9 +4,9 @@ import "./LogoutBtn.css";
 
 const LogoutBtn = props => (
   <button className="logout-btn" {...props}>
-  <Link to="/"><i className="fa fa-sign-out" aria-hidden="true"></i></Link>
-  
+  <Link to="/login"><i className="fa fa-sign-out" aria-hidden="true"></i></Link>
   </button>
+
 );
 
 export default LogoutBtn;
