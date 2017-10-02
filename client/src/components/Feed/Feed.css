@@ -2,9 +2,14 @@
 .list-group-item {
 }
 
+.backgroundUserImg {
+  height: 100px;
+}
+
 .feed-img {
+  border-radius: 50px;
   max-height: 100px;
-  max-width: 80px;
+  max-width: 100px;
 }
 
 .post-img {
@@ -13,8 +18,8 @@
 }
 
 .img-container {
-  width: 80px;
-  max-height: 100px;
+  width: 100px;
+  height: 100px;
   margin-right: 10px;
 }
 
@@ -25,7 +30,7 @@
 }
 
 .station, .train, .station, .postType, .date {
-  font-size: 14px;
+  font-size: 11px;
   font-family: 'Open Sans Condensed', sans-serif;
 }
 

@@ -5,32 +5,24 @@ nav.navbar {
   border-radius: 0;
 }
 
-.navbar a {
+.navbar-default .navbar-nav>li>a {
+  color: #ace0f7;
+}
+
+.navbar-default .navbar-nav>.active>a  {
   color: white;
+  background: #90b6e6;
 }
-
-nav.navbar.navbar-default {
-  margin-bottom: 0;
-}
-
-.active {
-  background-color: #56aaca;
+.navbar-default .navbar-nav>li>a:hover {
   color: white;
+  background: #90b6e6;
 }
-
-.navbar-brand:hover,
-.active:hover {
-  background-color: #56aaca;
+.navbar-default .navbar-nav>.active>a:hover {
   color: white;
+  background: #90b6e6;
 }
-
-.navbar-default .navbar-nav>.active>a, {
-  background-color: #56aaca;
-
-}
-
-.nav>li>a:hover {
-  background-color: #56aaca;
+.navbar-default .navbar-brand {
+    color: white;
 }
 
 .navbar-toggle {

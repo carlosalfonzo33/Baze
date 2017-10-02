@@ -57,6 +57,7 @@ class myFeed extends Component {
                 </div>
               </Col>
               <Col size="md-9">
+                <div className="photo"><img src={post.photo || ""} className="img-responsive post-img"/></div>
                 <div className="comment">{post.comment}</div>
                 <br />
                 <div className="station">Station: {post.station}</div>
