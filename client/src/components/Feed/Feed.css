@@ -7,6 +7,11 @@
   max-width: 80px;
 }
 
+.post-img {
+  max-height: 200px;
+  max-width: 300px;
+}
+
 .img-container {
   width: 80px;
   max-height: 100px;
