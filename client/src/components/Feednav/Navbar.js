@@ -43,7 +43,9 @@ const Navbar = props =>
           </li>
         </ul>
       </div>
-      <LogoutBtn />
+      <LogoutBtn
+        onClick={()=>window.localStorage.setItem('id', "")}
+      />
       <CreatePost />
     </div>
   </nav>;

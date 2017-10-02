@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Login from "./components/Login";
+import LoginCheck from "./components/LoginCheck";
 import AllFeed from "./components/Feed/AllFeed";
 import myFeed from "./components/Feed/myFeed";
 import delayFeed from "./components/Feed/delayFeed";
@@ -17,7 +18,8 @@ const App = () => {
   return(<Router>
     <div>
       <Switch>
-        <Route exact path="/" component={Login}  />
+        <Route exact path="/" component={LoginCheck}/>
+        <Route exact path="/login" component={Login} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/feed" component={AllFeed} />
         <Route exact path="/feed/delayfeed" component={delayFeed} />
