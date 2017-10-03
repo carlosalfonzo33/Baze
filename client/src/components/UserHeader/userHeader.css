@@ -1,3 +1,13 @@
 h1.welcome {
 	font-family: 'Syncopate', sans-serif;
 }
+
+.topnav {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.navbar-inverse {
+	background: #3584cd;
+
+}

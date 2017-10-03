@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Container, Row } from "../Grid";
 import { Link } from "react-router-dom";
-import API from "../../utils/API";
-import Nav from "../Nav";
+import './logincheck.css';
+
 
 class LoginCheck extends Component {
 
@@ -17,7 +16,7 @@ class LoginCheck extends Component {
   loggedIn = () => {
 
     if (this.state.id) {
-      window.location.href = '/feed';
+      // window.location.href = '/feed';
     } else {
       window.location.href = '/login';
     }
@@ -26,9 +25,10 @@ class LoginCheck extends Component {
   render() {
 
     return (
-      <Container>
-        <h3>BAZE - Social Commute</h3>
-      </Container>
+      <div className="spinner">
+      <i className="fa fa-spinner fa-spin fa-2x fa-fw"></i>
+      <span className="sr-only">Loading...</span>
+      </div>
 
     );
   }

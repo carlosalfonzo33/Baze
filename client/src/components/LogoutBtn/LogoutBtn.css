@@ -1,41 +1,12 @@
 .logout-btn {
-	position: absolute;
-	top: 9px;
-	right: 45px;
+	float: right;
 	background: inherit;
 	border: none;
-	font-size: 25px;
+	font-size: 20px;
 	color: white;
 }
 
-@media only screen and (max-width: 360px)
-{
-	.logout-btn
-
-	{
-		right: 110px;
-	}
+.navbar-inverse .logout-btn a {
+	/*color: #3584cd;*/
+	color: white;
 }
-
-@media only screen and (max-width: 412px)
-{
-	.logout-btn
-
-	{
-		right: 110px;
-	}
-}
-
-@media only screen and (max-width: 414px)
-{
-	.logout-btn
-
-	{
-		right: 110px;
-	}
-}
-
-
-
-
-

@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../Grid";
 import UserHeaderContainer from "../UserHeaderContainer";
 import "./userHeader.css";
-
+import LogoutBtn from "../LogoutBtn";
+import CreatePost from '../CreatePost';
+import Nav from "../Nav";
 
 
 class UserHeader extends Component {
@@ -27,18 +29,32 @@ class UserHeader extends Component {
   render() {
     // console.log("userheader", this.state.userData.img, this.state.userData.name, this.state.userId);
     return (
-      <Container fluid>
         <UserHeaderContainer>
           <Row>
             <Col size="md-12">
-              <div><img src={this.state.userData.file || this.state.userData.img} className="img-responsive header-img" alt={this.state.userData.name} /></div>
-              <h1 className="welcome">Welcome, {this.state.userData.name}!</h1>
-
-
+              <div className="topnav">
+                <div className="navbar-inverse nav">
+                  <LogoutBtn
+                    onClick={()=>window.localStorage.setItem('id', "")}
+                  />
+                </div>
+              </div>
             </Col>
           </Row>
+          <Row>
+            <Col size="md-2">
+
+              <div><img src={this.state.userData.file || this.state.userData.img} className="img-responsive header-img" alt={this.state.userData.name} /></div>
+            </Col>
+            <Col size="md-10">
+              <h1 className="welcome">Welcome, {this.state.userData.name}!</h1>
+              <CreatePost />
+
+            </Col>
+
+          </Row>
+
         </UserHeaderContainer>
-      </Container>
 
     );
   }
