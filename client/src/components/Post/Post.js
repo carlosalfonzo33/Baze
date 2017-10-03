@@ -52,7 +52,8 @@ class Post extends Component {
         postType: this.state.postType,
         isAlert: this.state.isAlert,
         station: this.state.station,
-        trainLine: this.state.trainLine
+        trainLine: this.state.trainLine,
+        date: Date.now()
       })
       .then(res => this.updateUserPosts(res), this.setState(
         { posts: [],

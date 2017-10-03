@@ -72,9 +72,9 @@ class Feed extends Component {
     const loader = <div className="loader">Loading ...</div>;
 
     return (
-      <Container>
-        <UserHeader />
         <Container fluid>
+        <UserHeader />
+
           <Row>
             <Col size="md-12">
               <Feednav />
@@ -91,7 +91,6 @@ class Feed extends Component {
             </Col>
           </Row>
         </Container>
-      </Container>
 
     );
   }
