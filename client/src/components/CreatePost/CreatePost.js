@@ -6,7 +6,7 @@ import "./createPost.css";
 
 const CreatePost = props => (
 	<button className="create-btn" {...props}>
-			 Create a Post
+			 create post
        <Link to="/post"><i className="fa fa-pencil"></i></Link>
 	</button>
 	);

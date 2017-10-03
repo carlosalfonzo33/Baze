@@ -7,7 +7,7 @@ import LogoutBtn from "../LogoutBtn";
 
 // Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = props =>
-  <nav className="nav navbar navbar-default" role="navigation">
+  <nav className="nav navbar navbar-default" data-spy="affix" data-offset-top="180" role="navigation">
     <div className="container-fluid">
       <div className="navbar-header">
        <button className="navbar-toggle collapsed"

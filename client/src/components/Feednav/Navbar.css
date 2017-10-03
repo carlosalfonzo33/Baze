@@ -5,6 +5,16 @@ nav.navbar {
   border-radius: 0;
 }
 
+.affix {
+      top: 0;
+      z-index: 2;
+      width: 98%;
+}
+
+.affix + .container-fluid {
+  padding-top: 200px;
+}
+
 .navbar-default .navbar-nav>li>a {
   color: white;
   letter-spacing: 1.5px;
