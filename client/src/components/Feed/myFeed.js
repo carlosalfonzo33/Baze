@@ -7,6 +7,7 @@ import InfiniteScroll from 'react-infinite-scroller';
 import UserHeader from "../UserHeader";
 import DeleteBtn from "../DeleteBtn";
 import "./Feed.css";
+import BartAlerts from '../BartAlerts';
 
 
 class myFeed extends Component {
@@ -87,6 +88,7 @@ class myFeed extends Component {
 
       <Container fluid>
         <UserHeader />
+        <BartAlerts />
           <Row>
             <Col size="md-12">
               <Feednav />

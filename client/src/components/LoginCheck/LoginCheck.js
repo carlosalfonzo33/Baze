@@ -16,7 +16,7 @@ class LoginCheck extends Component {
   loggedIn = () => {
 
     if (this.state.id) {
-      // window.location.href = '/feed';
+      window.location.href = '/feed';
     } else {
       window.location.href = '/login';
     }

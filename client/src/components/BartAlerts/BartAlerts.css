@@ -1,0 +1,10 @@
+.bart-alert {
+  background-color: rgba(244, 67, 54, 0.45);
+  color: #585757;
+  font-family: helvetica;
+  padding: 2px;
+  padding-left: 10px;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+
+}
