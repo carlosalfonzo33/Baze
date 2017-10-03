@@ -27,6 +27,11 @@ export default {
     return axios.get("/api/login/"+ name);
   },
 
+  alerts: function() {
+    return axios.get("https://api.bart.gov/api/bsa.aspx?cmd=bsa&key=ZVZV-PH5D-9W3T-DWE9&date=today&json=y");
+  },
+
+
   deletePost: function(id) {
     return axios.delete("/api/posts/" + id);
   },

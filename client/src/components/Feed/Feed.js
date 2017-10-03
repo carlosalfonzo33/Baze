@@ -6,6 +6,7 @@ import InfiniteScroll from 'react-infinite-scroller';
 import UserHeader from "../UserHeader";
 import "./Feed.css";
 import CreatePost from '../CreatePost';
+import BartAlerts from '../BartAlerts';
 
 
 
@@ -72,7 +73,7 @@ class Feed extends Component {
     return (
         <Container fluid>
         <UserHeader />
-
+        <BartAlerts />
           <Row>
             <Col size="md-12">
               <Feednav />
