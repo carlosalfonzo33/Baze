@@ -34,6 +34,10 @@
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
+.comment, .post-img {
+  margin-top: 30px;
+}
+
 .comment {
 	font-family: 'Marvel', sans-serif;
 	font-size: 19px;

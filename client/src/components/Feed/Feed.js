@@ -35,26 +35,24 @@ class Feed extends Component {
 
         this.state.displayedItems.push(
           <ListItem key={post._id}>
-          <Container>
-          <Row>
-          <Col size="md-2">
-          <div>
-            <div className="img-container"><img src={post.userId.file || post.userId.img} className="img-responsive feed-img" alt={post.userId.name}/></div>
-            <div className="username">{post.userId.name} </div>
-          </div>
-          </Col>
-          <Col size="md-10">
-          <div className="photo"><img src={post.photo || ""} className="img-responsive post-img"/></div>
-          <div className="comment">{post.comment || ""}</div>
-          <br />
-          <div className="station">Station: {post.station} / Line: {post.trainLine}</div>
-          <div className="postType">Post Type: {post.postType} / Date: {post.date}</div>
-
-          </Col>
-
-
-          </Row>
-          </Container>
+            <Container>
+              <Row>
+                <Col size="md-2">
+                <div>
+                  <div className="img-container"><img src={post.userId.file || post.userId.img} className="img-responsive feed-img" alt={post.userId.name}/></div>
+                  <div className="username">{post.userId.name} </div>
+                </div>
+                </Col>
+                <Col size="md-3">
+                  <div className="station">Station: {post.station} / Line: {post.trainLine}</div>
+                  <div className="postType">Post Type: {post.postType} / Date: {post.date}</div>
+                </Col>
+                <Col size="md-6">
+                  <div className="photo"><img src={post.photo || ""} className="img-responsive post-img"/></div>
+                  <div className="comment">{post.comment || ""}</div>
+                </Col>
+              </Row>
+            </Container>
           </ListItem>);
       }
 

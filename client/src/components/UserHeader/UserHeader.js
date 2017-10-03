@@ -29,7 +29,8 @@ class UserHeader extends Component {
   render() {
     // console.log("userheader", this.state.userData.img, this.state.userData.name, this.state.userId);
     return (
-        <UserHeaderContainer>
+        <UserHeaderContainer
+        >
           <Row>
             <Col size="md-12">
               <div className="topnav">

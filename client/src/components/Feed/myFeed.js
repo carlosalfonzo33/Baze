@@ -49,6 +49,7 @@ class myFeed extends Component {
       this.state.displayedItems.push(
         <ListItem key={post._id}>
           <Container>
+          <div style={{marginTop: "10px"}}>
             <Row>
               <Col size="md-2">
                 <div className="name-img">
@@ -56,17 +57,19 @@ class myFeed extends Component {
                   <div className="username">{this.state.posts.name} </div>
                 </div>
               </Col>
-              <Col size="md-9">
+              <Col size="md-3">
+                <div className="station">Station: {post.station} / Line: {post.trainLine}</div>
+                <div className="postType">Post Type: {post.postType} / Date: {post.date}</div>
+              </Col>
+              <Col size="md-6">
                 <div className="photo"><img src={post.photo || ""} className="img-responsive post-img"/></div>
                 <div className="comment">{post.comment}</div>
-                <br />
-                <div className="station">Station: {post.station}</div>
-                <div className="train">Line: {post.trainLine}</div>
-                <div className="postType">Post Type: {post.postType}</div>
-                <div className="date">{post.date}</div>
+              </Col>
+              <Col size="md-1">
                 <DeleteBtn onClick={() => this.deletePost(post._id)} />
               </Col>
             </Row>
+          </div>
           </Container>
         </ListItem>);
     });
@@ -81,9 +84,9 @@ class myFeed extends Component {
     const loader = <div className="loader">Loading ...</div>;
 
     return (
-      <Container>
+
+      <Container fluid>
         <UserHeader />
-        <Container fluid>
           <Row>
             <Col size="md-12">
               <Feednav />
@@ -98,7 +101,6 @@ class myFeed extends Component {
               </InfiniteScroll>
             </Col>
           </Row>
-        </Container>
       </Container>
 
     );
