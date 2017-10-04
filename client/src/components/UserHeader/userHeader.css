@@ -15,3 +15,10 @@ h1.welcome {
 	background: #3584cd;
 
 }
+
+.header-img {
+	object-fit: cover;
+	border-radius:50%;
+	width: 150px;
+	height: 150px;
+}
