@@ -20,6 +20,12 @@ class Post extends Component {
     file: "",
   };
 
+  componentDidMount() {
+    if (window.localStorage.getItem('id') === '') {
+      window.location.href = '/login';
+    }
+  };
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({

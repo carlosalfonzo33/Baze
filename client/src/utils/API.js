@@ -45,6 +45,11 @@ export default {
     console.log("POSTS data to insert into users!", id);
     return axios.post("/api/users/update ", id);
   },
+
+  updatePostLikes: function(data) {
+    console.log("ids of liked post and userid I'm sending to controller!", data);
+    return axios.post("/api/posts/like", data);
+  },
   //Signup-Login
   signUp: function(data) {
     console.log("signed up user", data);
