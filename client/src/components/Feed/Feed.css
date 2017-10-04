@@ -20,6 +20,7 @@
 }
 
 .img-container {
+  float: left;
   width: 100px;
   height: 100px;
   margin-right: 10px;
@@ -37,7 +38,7 @@
 }
 
 .comment, .post-img {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .comment {

@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const postSchema = new Schema({
   userId: { type: Schema.Types.ObjectId, ref: "User"},
   comment: { type: String },
+  url: { type: String },
   photo: { type: String, data: Buffer},
   postType: { type: String, required: true },
   isAlert: { type: Boolean, default: false},

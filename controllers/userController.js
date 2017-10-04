@@ -6,8 +6,7 @@ module.exports = {
   findById: function(req, res) {
     db.User
       .findById(req.params.id)
-      .populate("posts")
-      .sort({date: -1})
+      .populate({path: 'posts', options: { sort: { date: -1 } } })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
