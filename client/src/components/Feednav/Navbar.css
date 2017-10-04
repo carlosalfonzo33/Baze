@@ -9,6 +9,7 @@ nav.navbar {
       top: 0;
       z-index: 2;
       width: 98%;
+      
 }
 
 .affix + .container-fluid {

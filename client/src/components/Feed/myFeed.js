@@ -33,7 +33,9 @@ class myFeed extends Component {
   deletePost = id => {
     API.deletePost(id)
       .then(res => {
-        window.location.href = '/feed/myfeed'})
+        this.setState({ displayedItems: [] })
+        this.loadPosts()
+      })
       .catch(err => console.log(err));
   };
 
@@ -83,7 +85,7 @@ class myFeed extends Component {
 
   render() {
     const loader = <div className="loader">Loading ...</div>;
-
+    console.log("rendering myfeed");
     return (
 
       <Container fluid>
