@@ -73,13 +73,12 @@ class myFeed extends Component {
                             </div>
                           </Col>
 
-                          <Col size="md-8">
+                          <Col size="md-5">
                           {post.photo && <div className="photo"><img src={post.photo} className="img-responsive post-img" alt=""/></div>}
                           {post.url && <div className="photo"><img src={post.url} className="img-responsive post-img" alt={post.comment || "no description"}/></div>}
-
                           {post.comment && <div className="comment">{post.comment}</div>}
                           </Col>
-                          <Col size="md-1">
+                          <Col size="md-3">
                             <DeleteBtn onClick={() => this.deletePost(post._id)} />
                           </Col>
                         </Row>

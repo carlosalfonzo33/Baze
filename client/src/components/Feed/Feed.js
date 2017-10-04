@@ -7,6 +7,7 @@ import UserHeader from "../UserHeader";
 import "./Feed.css";
 import CreatePost from '../CreatePost';
 import BartAlerts from '../BartAlerts';
+import LikeIt from '../LikeIt';
 
 
 
@@ -29,7 +30,6 @@ class Feed extends Component {
     // console.log("displayItems");
     if(this.props.data.length === 0)
       return;
-    console.log(this.state.startItem);
     var postSelection = this.props.data.slice(this.state.startItem,this.state.startItem+chunkSize);
 
     postSelection.map(post => {
@@ -49,10 +49,15 @@ class Feed extends Component {
                   </div>
                 </div>
                 </Col>
-                <Col size="md-9">
+                <Col size="md-5">
                   {post.photo && <div className="photo"><img src={post.photo} className="img-responsive post-img" alt={post.comment || "no description"}/></div>}
                   {post.url && <div className="photo"><img src={post.url} className="img-responsive post-img" alt={post.comment || "no description"}/></div>}
                   {post.comment && <div className="comment">{post.comment}</div>}
+                </Col>
+                <Col size="md-3">
+                  <LikeIt
+                  postLiked={post._id}
+                  likes={post.likes}/>
                 </Col>
               </Row>
             </Container>

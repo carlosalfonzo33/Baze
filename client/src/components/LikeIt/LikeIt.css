@@ -1,0 +1,14 @@
+.like-btn {
+	font-family: 'Syncopate', sans-serif;
+	background: inherit;
+	border: none;
+	font-size: 20px;
+	color: black;
+}
+
+.like-count {
+	margin-top: 6px;
+	float: left;
+	color: black;
+	font-size: 12px;
+}

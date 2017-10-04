@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const postController = require("../../controllers/postController");
 
-// Matches with "/api/post"
+// Matches with "/api/posts"
 router.route("/")
   .get(postController.findAll)
   .post(postController.create);
@@ -15,7 +15,10 @@ router.route("/station")
 router.route("/train")
   .get(postController.findTrainPosts);
 
-// Matches with "/api/post/:id"
+router.route("/like")
+  .post(postController.updatePostLikes);
+
+// Matches with "/api/posts/:id"
 router.route("/:id")
   .get(postController.findById)
   .delete(postController.remove);

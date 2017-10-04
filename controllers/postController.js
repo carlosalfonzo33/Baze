@@ -30,6 +30,7 @@ module.exports = {
     db.Post
       .find({postType: "Train"})
       .populate("userId")
+      .populate("likes")
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
@@ -52,5 +53,11 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  updatePostLikes: function(req, res) {
+    db.Post
+    .findOneAndUpdate({ "_id": req.body.postId }, { $addToSet: { "likes": req.body.userId } }, { new: true })
+    .then(dbModel => res.json(dbModel))
+    .catch(err => res.status(422).json(err));
   }
 };
