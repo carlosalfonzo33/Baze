@@ -49,7 +49,7 @@ class Feed extends Component {
                   <div className="postType">Post Type: {post.postType} / Date: {post.date}</div>
                 </Col>
                 <Col size="md-6">
-                  <div className="photo"><img src={post.photo || ""} className="img-responsive post-img"/></div>
+                  {post.photo && <div className="photo"><img src={post.photo} className="img-responsive post-img" alt=""/></div>}
                   <div className="comment">{post.comment || ""}</div>
                 </Col>
               </Row>
