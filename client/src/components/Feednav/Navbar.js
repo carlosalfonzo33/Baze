@@ -5,9 +5,9 @@ import CreatePost from '../CreatePost';
 import "../Nav/Nav.css";
 import LogoutBtn from "../LogoutBtn";
 
-// Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Navbar = props =>
-  <nav className="nav navbar navbar-default" data-spy="affix" data-offset-top="180" role="navigation">
+<div className="feed-navbar">
+  <nav className="nav navbar navbar-default">
     <div className="container-fluid">
       <div className="navbar-header">
        <button className="navbar-toggle collapsed"
@@ -44,11 +44,8 @@ const Navbar = props =>
             </li>
           </ul>
         </div>
-
       </div>
-
-
     </div>
-  </nav>;
-
+  </nav>
+</div>;
 export default Navbar;

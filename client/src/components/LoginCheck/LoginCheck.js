@@ -25,10 +25,7 @@ class LoginCheck extends Component {
   render() {
 
     return (
-      <div className="spinner">
-      <i className="fa fa-spinner fa-spin fa-2x fa-fw"></i>
-      <span className="sr-only">Loading...</span>
-      </div>
+    null
 
     );
   }

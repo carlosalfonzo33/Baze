@@ -10,8 +10,13 @@ class AllFeed extends Component {
 
   //when saved component loads, get the posts already saved to db
   componentDidMount() {
-    this.loadPosts();
-  }
+    if (window.localStorage.getItem('id')) {
+      this.loadPosts();
+    } else {
+      window.location.href = '/login';
+    }
+
+  };
 
   loadPosts = () => {
     API.getPosts()

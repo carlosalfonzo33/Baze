@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import { Redirect } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-import { FormBtn, Stationmenu, PostType, TrainLines } from "../../components/Form";
+import { Input, FormBtn, Stationmenu, PostType, TrainLines } from "../../components/Form";
 
 
 class Post extends Component {
@@ -10,6 +10,7 @@ class Post extends Component {
     posts: [],
     userId: window.localStorage.getItem('id') || '',
     comment: "",
+    url: "",
     photo: "",
     postType: "Train",
     isAlert: false,
@@ -48,6 +49,7 @@ class Post extends Component {
     API.savePosts(
       { userId: this.state.userId,
         comment: this.state.comment,
+        url: this.state.url,
         photo: this.state.photo,
         postType: this.state.postType,
         isAlert: this.state.isAlert,
@@ -57,6 +59,7 @@ class Post extends Component {
       })
       .then(res => this.updateUserPosts(res), this.setState(
         { posts: [],
+          url: "",
           comment: "",
           photo: "",
           postType: "Train",
@@ -135,18 +138,14 @@ class Post extends Component {
                 </label>
                 <br />
                 <label>
-                  Your comment here:
-                  <br />
-                  <textarea
-                    className="form-control"
-                    name="comment"
-                    value={this.state.comment}
-                    onChange={this.handleInputChange}
-                  />
-                </label>
-                <label>
-                  Upload Image:
+                  Add Image URL or Upload Photo:
                   <div className="form-group">
+                    <Input
+                      value={this.state.url}
+                      onChange={this.handleInputChange}
+                      name="url"
+                      placeholder="Image(URL)"
+                    />
                     <input className="fileInput form-control-file"
                        type="file"
                        onChange={this.handleImageChange} />
@@ -157,9 +156,19 @@ class Post extends Component {
                      </div>
                    </div>
                  </label>
+                 <label>
+                   Your comment here:
+                   <br />
+                   <textarea
+                     className="form-control"
+                     name="comment"
+                     value={this.state.comment}
+                     onChange={this.handleInputChange}
+                   />
+                 </label>
                 <br />
                 <FormBtn
-                  disabled={!(this.state.comment)}
+                  disabled={!(this.state.comment) && !(this.state.photo) && !(this.state.url)}
                   onClick={this.handleFormSubmit}>
                   Post
                 </FormBtn>

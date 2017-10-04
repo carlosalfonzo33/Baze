@@ -5,6 +5,8 @@ import API from "../../utils/API";
 import Nav from "../Nav";
 import ImageUpload from "../ImageUpload";
 import './signup.css';
+import { Input } from "../../components/Form";
+
 
 class SignUp extends Component {
 
@@ -12,6 +14,7 @@ class SignUp extends Component {
     name: "",
     email: "",
     password: "",
+    img: "",
     file: "",
     imagePreviewUrl: ""
 
@@ -46,7 +49,7 @@ class SignUp extends Component {
 
   handleFormSubmit = event => {
       event.preventDefault();
-      API.signUp({name: this.state.name, email: this.state.email, password: this.state.password, file: this.state.imagePreviewUrl})
+      API.signUp({name: this.state.name, email: this.state.email, password: this.state.password, img: this.state.img, file: this.state.imagePreviewUrl})
           .then(res => console.log('response signup', res))
           .catch(err => console.log(err));
   };
@@ -100,6 +103,12 @@ class SignUp extends Component {
                 </input>
               </div>
               <div className="form-group">
+              <Input
+                value={this.state.img}
+                onChange={this.handleInputChange}
+                name="img"
+                placeholder="Image(URL)"
+              />
               <input className="fileInput form-control-file"
                  type="file"
                  onChange={this.handleImageChange} />

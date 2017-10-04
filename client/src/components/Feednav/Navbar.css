@@ -5,16 +5,27 @@ nav.navbar {
   border-radius: 0;
 }
 
-.affix {
+.feed-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/*.feed-navbar-main-container {
+  position: sticky;
+}*/
+
+/*.affix {
+      position: fixed;
       top: 0;
       z-index: 2;
       width: 98%;
-      
+
 }
 
 .affix + .container-fluid {
   padding-top: 200px;
-}
+}*/
 
 .navbar-default .navbar-nav>li>a {
   color: white;
@@ -35,6 +46,11 @@ nav.navbar {
 }
 .navbar-default .navbar-brand {
     color: white;
+}
+
+.navbar-default .navbar-brand:hover {
+  background: #90b6e6;
+  color: white;
 }
 
 .navbar-default

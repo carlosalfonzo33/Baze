@@ -33,30 +33,31 @@ class Feed extends Component {
     var postSelection = this.props.data.slice(this.state.startItem,this.state.startItem+chunkSize);
 
     postSelection.map(post => {
-
         this.state.displayedItems.push(
           <ListItem key={post._id}>
             <Container>
               <Row>
-                <Col size="md-2">
+                <Col size="md-3">
                 <div>
                   <div className="img-container"><img src={post.userId.file || post.userId.img} className="img-responsive feed-img" alt={post.userId.name}/></div>
                   <div className="username">{post.userId.name} </div>
+                  <div>
+                    <div className="station">Station: {post.station} </div>
+                    <div className="train">Line: {post.trainLine}</div>
+                    <div className="postType">Post Type: {post.postType} </div>
+                    <div className="date">Date: {post.date}</div>
+                  </div>
                 </div>
                 </Col>
-                <Col size="md-3">
-                  <div className="station">Station: {post.station} / Line: {post.trainLine}</div>
-                  <div className="postType">Post Type: {post.postType} / Date: {post.date}</div>
-                </Col>
-                <Col size="md-6">
-                  {post.photo && <div className="photo"><img src={post.photo} className="img-responsive post-img" alt=""/></div>}
-                  <div className="comment">{post.comment || ""}</div>
+                <Col size="md-9">
+                  {post.photo && <div className="photo"><img src={post.photo} className="img-responsive post-img" alt={post.comment || "no description"}/></div>}
+                  {post.url && <div className="photo"><img src={post.url} className="img-responsive post-img" alt={post.comment || "no description"}/></div>}
+                  {post.comment && <div className="comment">{post.comment}</div>}
                 </Col>
               </Row>
             </Container>
           </ListItem>);
       }
-
     );
 
     this.setState({
@@ -71,12 +72,14 @@ class Feed extends Component {
     const loader = <div className="loader">Loading ...</div>;
 
     return (
-        <Container fluid>
-        <UserHeader />
-        <BartAlerts />
+    <div>
+      <UserHeader />
+      <BartAlerts />
+      <Feednav />
+
+
           <Row>
             <Col size="md-12">
-              <Feednav />
 
               <InfiniteScroll
                     pageStart={0}
@@ -89,8 +92,7 @@ class Feed extends Component {
               </InfiniteScroll>
             </Col>
           </Row>
-        </Container>
-
+      </div>
     );
   }
 }
