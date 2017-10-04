@@ -12,3 +12,12 @@ h1 {
     font-size: 2em;
     margin-bottom: 20px;
 }
+
+.previewImg {
+	object-fit: cover;
+	border-radius:50%;
+	width: 400px;
+	height: 400px;
+}
+
+/*test*/
