@@ -11,6 +11,7 @@
   border-radius:50%;
   width: 100px;
   height: 100px;
+  border: 1px solid rgba(221, 221, 221, 0.25);
 }
 
 .post-img {
@@ -19,10 +20,12 @@
   height: 200px;
 }
 
+/*.post-wrapper {
+  width: 100%;
+}*/
+
 .img-container {
   float: left;
-  width: 100px;
-  height: 100px;
   margin-right: 10px;
 }
 
@@ -38,7 +41,8 @@
 }
 
 .comment, .post-img {
-  margin-top: 20px;
+  /*margin: 0 auto;*/
+
 }
 
 .comment {

@@ -82,7 +82,7 @@ class Login extends Component {
 
               >
               </input>
-              <button className="btn btn-primary"
+              <button className="btn"
                 type='submit'
                 onClick={this.handleFormSubmit}
               >

@@ -42,17 +42,19 @@ class Feed extends Component {
                   <div className="img-container"><img src={post.userId.file || post.userId.img} className="img-responsive feed-img" alt={post.userId.name}/></div>
                   <div className="username">{post.userId.name} </div>
                   <div>
-                    <div className="station">Station: {post.station} </div>
-                    <div className="train">Line: {post.trainLine}</div>
-                    <div className="postType">Post Type: {post.postType} </div>
+                    <div className="station"><strong>Station:</strong> {post.station} </div>
+                    <div className="train"><strong>Line:</strong> {post.trainLine}</div>
+                    <div className="postType"><strong>Post Type:</strong> {post.postType} </div>
                     <div className="date">Date: {post.date}</div>
                   </div>
                 </div>
                 </Col>
                 <Col size="md-5">
-                  {post.photo && <div className="photo"><img src={post.photo} className="img-responsive post-img" alt={post.comment || "no description"}/></div>}
-                  {post.url && <div className="photo"><img src={post.url} className="img-responsive post-img" alt={post.comment || "no description"}/></div>}
-                  {post.comment && <div className="comment">{post.comment}</div>}
+                  <div className="post-wrapper">
+                    {post.photo && <div className="photo"><img src={post.photo} className="img-responsive post-img" alt={post.comment || "no description"}/></div>}
+                    {post.url && <div className="photo"><img src={post.url} className="img-responsive post-img" alt={post.comment || "no description"}/></div>}
+                    {post.comment && <div className="comment">{post.comment}</div>}
+                  </div>
                 </Col>
                 <Col size="md-3">
                   <LikeIt

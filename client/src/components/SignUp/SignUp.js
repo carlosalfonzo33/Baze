@@ -118,7 +118,7 @@ class SignUp extends Component {
                 {$imagePreview}
                </div>
               </div>
-                <button className="btn btn-primary"
+                <button className="btn"
                 type='submit'
                 onClick={this.handleFormSubmit}
                 >

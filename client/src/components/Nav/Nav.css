@@ -5,6 +5,19 @@ nav.navbar {
   border-radius: 0;
 }
 
+.mynav {
+  width: 100%;
+  background-color: #3584cd;
+}
+
 .navbar a {
   color: white;
+}
+
+.baze-logo {
+  font-family: 'Codystar', cursive;
+  color: white;
+  font-size: 3em;
+  text-align: center;
+
 }
