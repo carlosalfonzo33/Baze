@@ -45,7 +45,7 @@ class Feed extends Component {
                     <div className="station"><strong>Station:</strong> {post.station} </div>
                     <div className="train"><strong>Line:</strong> {post.trainLine}</div>
                     <div className="postType"><strong>Post Type:</strong> {post.postType} </div>
-                    <div className="date">Date: {post.date}</div>
+                    <div className="date"><strong>Date: {post.date}</strong></div>
                   </div>
                 </div>
                 </Col>

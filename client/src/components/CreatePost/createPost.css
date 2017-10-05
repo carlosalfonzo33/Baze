@@ -1,23 +1,5 @@
-/*.create-btn {
-	float: right;
-	position: absolute;
-	top: 0px;
-	right: 10px;
-	background: inherit;
-	border: none;
-	font-size: 35px;
-}
 
-.fa-pencil:hover {
-	color: #90b6e6;
-}
 
-@media only screen and (max-width: 768px)
-{
-	.create-btn {
-		right: 80px;
-	}
-}*/
 
 .create-btn {
 	font-family: 'Syncopate', sans-serif;
@@ -29,4 +11,16 @@
 
 .fa-pencil {
 	color: #65bdb4;
+}
+.fa-pencil:hover {
+	color: #90b6e6;
+}
+
+
+
+@media only screen and (max-width: 500px)
+{
+	.create-btn {
+		margin-left: 20px;
+	}
 }

@@ -6,6 +6,7 @@
   height: 100px;
 }
 
+/*user images in the feed*/
 .feed-img {
   object-fit: cover;
   border-radius:50%;
@@ -14,15 +15,12 @@
   border: 1px solid rgba(221, 221, 221, 0.25);
 }
 
+/*posted image content*/
 .post-img {
   object-fit: cover;
-  width: 200px;
-  height: 200px;
-}
-
-/*.post-wrapper {
   width: 100%;
-}*/
+  height: 100%;
+}
 
 .img-container {
   float: left;
@@ -30,8 +28,7 @@
 }
 
 .username {
-  font-family: 'Syncopate', sans-serif;
-  font-size: 20px;
+  font-family: "News Cycle","Arial Narrow Bold",sans-serif;  font-size: 20px;
   font-weight: bold;
 }
 
@@ -40,13 +37,32 @@
   font-family: 'Open Sans Condensed', sans-serif;
 }
 
-.comment, .post-img {
-  /*margin: 0 auto;*/
-
-}
 
 .comment {
 	font-family: 'Marvel', sans-serif;
-	font-size: 19px;
+	font-size: 22px;
+  color: black;
+}
+
+@media only screen and (max-width: 500px) {
+    .comment, .post-img {
+      margin-top: 20px;
+    }
+
+    .post-img {
+      margin-top: 30px;
+
+    }
+
+    .feed-img {
+      margin-top: 5px;
+      width: 80px;
+      height: 80px;
+    }
+
+    .username {
+      margin-top: 10px;
+    }
+
 
 }
