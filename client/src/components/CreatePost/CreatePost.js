@@ -5,10 +5,10 @@ import "./createPost.css";
 
 
 const CreatePost = props => (
-	<button className="create-btn" {...props}>
+	<Link to="/post"><button className="create-btn" {...props}>
 			 create post
-       <Link to="/post"><i className="fa fa-pencil"></i></Link>
-	</button>
+       <i className="fa fa-pencil"></i>
+	</button></Link>
 	);
 
 export default CreatePost;

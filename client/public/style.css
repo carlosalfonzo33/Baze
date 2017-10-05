@@ -1,0 +1,23 @@
+
+body {
+  font-family: "News Cycle","Arial Narrow Bold",sans-serif;
+
+}
+
+h1 {
+  font-weight: 300;
+}
+
+a {
+  color: #2608ce;
+}
+
+.btn {
+  background: #65bdb4 !important;
+  color: white !important;
+  font-family: "News Cycle","Arial Narrow Bold",sans-serif;
+}
+
+form {
+  margin-bottom: 20px;
+}
