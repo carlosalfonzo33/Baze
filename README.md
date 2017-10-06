@@ -23,6 +23,10 @@ MERN STACK
 * REACT
 * NODE.JS
 
+## New Technologies
+
+* Moment.JS
+
 
 ## APIS
 
