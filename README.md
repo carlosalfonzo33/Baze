@@ -11,8 +11,13 @@ A social Commuting application for users of BART - Bay Area Rapid Transit
 <img width="1627" alt="screen shot 2017-10-05 at 6 13 45 pm" src="https://user-images.githubusercontent.com/25913749/31259299-9a360876-a9fa-11e7-9a76-313d57005bea.png">
 
 
- **Baze feeds view**
+ 
+ 
+ 
+ 
+ 
 <img width="413" alt="screen shot 2017-10-05 at 2 18 00 pm" src="https://user-images.githubusercontent.com/25913749/31259325-bf1b213a-a9fa-11e7-81e4-61559095036d.png">
+**Baze feeds view**
 
 
 ## Technologies used
