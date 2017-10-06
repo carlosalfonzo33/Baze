@@ -39,9 +39,9 @@ class Feed extends Component {
           <ListItem key={post._id}>
             <Container>
               <Row>
-                <Col size="md-3">
+                <Col size="md-4">
                 <div>
-                  <div className="img-container"><img src={post.userId.file || post.userId.img} className="img-responsive feed-img" alt={post.userId.name}/></div>
+                  <div className="img-container"><img src={post.userId.file || post.userId.img || "http://scontent.cdninstagram.com/t51.2885-15/s480x480/e35/13627991_1786762981582482_1865255854_n.jpg?ig_cache_key=MTI5MDEyNzkzODEzODUxNjQyNQ%3D%3D.2"} className="img-responsive feed-img"/></div>
                   <div className="username">{post.userId.name} </div>
                   <div>
                     <div className="station"><strong>Station:</strong> {post.station} </div>
@@ -79,7 +79,8 @@ class Feed extends Component {
   render() {
     console.log("render");
 
-    const loader = <div className="loader">Loading ...</div>;
+    const loader = <div className="loader"><i className="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+    <span className="sr-only">Loading...</span></div>;
 
     return (
     <div>

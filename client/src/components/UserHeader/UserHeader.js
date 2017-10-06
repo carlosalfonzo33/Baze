@@ -45,7 +45,7 @@ class UserHeader extends Component {
           <Row>
             <Col size="md-2">
 
-              <div><img src={this.state.userData.file || this.state.userData.img} className="img-responsive header-img" alt={this.state.userData.name} /></div>
+              <div><img src={this.state.userData.file || this.state.userData.img || "http://scontent.cdninstagram.com/t51.2885-15/s480x480/e35/13627991_1786762981582482_1865255854_n.jpg?ig_cache_key=MTI5MDEyNzkzODEzODUxNjQyNQ%3D%3D.2"} className="img-responsive header-img" alt={this.state.userData.name} /></div>
             </Col>
             <Col size="md-10">
               <h1 className="welcome">Welcome, {this.state.userData.name}!</h1>

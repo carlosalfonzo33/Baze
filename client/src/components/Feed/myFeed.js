@@ -62,14 +62,14 @@ class myFeed extends Component {
                   <ListItem key={post._id}>
                       <Container>
                         <Row>
-                          <Col size="md-3">
+                          <Col size="md-4">
                             <div>
-                              <div className="img-container"><img src={this.state.user.file || this.state.user.img} className="img-responsive feed-img" alt={this.state.user.name} /></div>
+                            <div className="img-container"><img src={this.state.user.file || this.state.user.img || "http://scontent.cdninstagram.com/t51.2885-15/s480x480/e35/13627991_1786762981582482_1865255854_n.jpg?ig_cache_key=MTI5MDEyNzkzODEzODUxNjQyNQ%3D%3D.2"} className="img-responsive feed-img"/></div>
                               <div className="username">{this.state.user.name} </div>
                               <div>
-                                <div className="station">Station: {post.station} </div>
-                                <div className="train">Line: {post.trainLine}</div>
-                                <div className="postType">Post Type: {post.postType} </div>
+                                <div className="station"><strong>Station:</strong> {post.station} </div>
+                                <div className="train"><strong>Line:</strong> {post.trainLine}</div>
+                                <div className="postType"><strong>Post Type:</strong> {post.postType} </div>
                                 <div className="date"><strong>Date:</strong> <Moment format="MM/DD/YYYY - hh:mm a">{post.date}</Moment></div>
                               </div>
                             </div>
