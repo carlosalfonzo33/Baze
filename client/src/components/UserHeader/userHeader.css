@@ -35,20 +35,20 @@ h1.welcome {
 
 @media (max-width: 360px) {
 	h1 {
-		font-size: 1.5em !important;
+		font-size: 1.4em !important;
 		margin-top: 32px !important;
 	}
 	.create-btn {
-		font-size: 17px !important;
+		font-size: 15px !important;
 	}
 }
 
 @media (max-width: 320px) {
 	h1 {
-		font-size: 1.4em !important;
+		font-size: 1.2em !important;
 		margin-top: 32px !important;
 	}
 	.create-btn {
-		font-size: 12px !important;
+		font-size: 10px !important;
 	}
 }

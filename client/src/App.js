@@ -16,7 +16,7 @@ import SignUp from "./components/SignUp";
 const App = () => {
 
   return(<Router>
-    <div style={{ "overflow": "hidden", "maxWidth": "100%"}}>
+    <div style={{ "margin-right": "5px", "margin-left": "5px"}}>
       <Switch>
         <Route exact path="/" component={LoginCheck}/>
         <Route exact path="/login" component={Login} />
