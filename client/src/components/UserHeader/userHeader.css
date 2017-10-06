@@ -1,11 +1,9 @@
-body {
-	 /*padding-top: 190px;*/
- }
+
 
 h1.welcome {
-  margin-top: 15px;
+  margin-top: 32px;
 	font-family: 'Syncopate', sans-serif;
-
+  text-align: center;
 }
 
 .topnav {
@@ -28,17 +26,12 @@ h1.welcome {
 
 }
 
-
-
 @media (max-width: 500px) {
 	h1.welcome {
-    text-align: center;
 		font-size: 1.2em !important;
-		margin-top: 32px !important;
 	}
 	.create-btn {
 		font-size: 15px !important;
-    margin-left: 50px;
 	}
 
   .header-img {
@@ -46,6 +39,7 @@ h1.welcome {
     height: 100px;
   }
 }
+
 
 @media (max-width: 320px) {
 	h1.welcome {
