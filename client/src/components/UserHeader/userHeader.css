@@ -31,6 +31,24 @@ h1.welcome {
     h1.welcome {
         text-align: center;
     }
+}
 
+@media (max-width: 360px) {
+	h1 {
+		font-size: 1.5em !important;
+		margin-top: 32px !important;
+	}
+	.create-btn {
+		font-size: 17px !important;
+	}
+}
 
+@media (max-width: 320px) {
+	h1 {
+		font-size: 1.4em !important;
+		margin-top: 32px !important;
+	}
+	.create-btn {
+		font-size: 12px !important;
+	}
 }
