@@ -28,28 +28,36 @@ h1.welcome {
 
 }
 
-@media only screen and (max-width: 500px) {
-    h1.welcome {
-        text-align: center;
-    }
-}
 
-@media (max-width: 375px) {
-	h1.welcome {
-		font-size: 1.4em !important;
-		margin-top: 32px !important;
-	}
-	.create-btn {
-		font-size: 15px !important;
-	}
-}
 
-@media (max-width: 320px) {
+@media (max-width: 500px) {
 	h1.welcome {
+    text-align: center;
 		font-size: 1.2em !important;
 		margin-top: 32px !important;
 	}
 	.create-btn {
-		font-size: 10px !important;
+		font-size: 15px !important;
+    margin-left: 50px;
 	}
+
+  .header-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 320px) {
+	h1.welcome {
+		font-size: 1em !important;
+		margin-top: 32px !important;
+	}
+	.create-btn {
+		font-size: 11px !important;
+	}
+
+  .header-img {
+    width: 100px;
+    height: 100px;
+  }
 }
