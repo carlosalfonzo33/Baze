@@ -3,6 +3,8 @@ import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import Feednav from "../Feednav";
+import Moment from 'react-moment';
+import 'moment-timezone';
 import UserHeader from "../UserHeader";
 import DeleteBtn from "../DeleteBtn";
 import "./Feed.css";
@@ -68,7 +70,7 @@ class myFeed extends Component {
                                 <div className="station">Station: {post.station} </div>
                                 <div className="train">Line: {post.trainLine}</div>
                                 <div className="postType">Post Type: {post.postType} </div>
-                                <div className="date">Date: {post.date}</div>
+                                <div className="date"><strong>Date:</strong> <Moment format="MM/DD/YYYY - hh:mm a">{post.date}</Moment></div>
                               </div>
                             </div>
                           </Col>
