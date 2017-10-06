@@ -4,12 +4,19 @@ A social Commuting application for users of BART - Bay Area Rapid Transit
 ## Examples
 
 **Baze Login View**
+<img width="1653" alt="screen shot 2017-10-05 at 6 14 40 pm" src="https://user-images.githubusercontent.com/25913749/31259295-8ee008b4-a9fa-11e7-9f5d-1020387afa9c.png">
 
 
 **Baze feeds view**
+<img width="1627" alt="screen shot 2017-10-05 at 6 13 45 pm" src="https://user-images.githubusercontent.com/25913749/31259299-9a360876-a9fa-11e7-9a76-313d57005bea.png">
 
 
 **Baze feeds view**
+<img width="1650" alt="screen shot 2017-10-05 at 6 14 17 pm" src="https://user-images.githubusercontent.com/25913749/31259315-b546ce7a-a9fa-11e7-88ce-352dee795e6b.png">
+
+
+**Baze mobile view**
+<img width="413" alt="screen shot 2017-10-05 at 2 18 00 pm" src="https://user-images.githubusercontent.com/25913749/31259325-bf1b213a-a9fa-11e7-81e4-61559095036d.png">
 
 
 ## Technologies used
