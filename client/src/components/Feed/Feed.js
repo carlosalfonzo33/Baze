@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import { ListItem } from "../../components/List";
-import Feednav from "../Feednav"
+import Feednav from "../Feednav";
+import Moment from 'react-moment';
+import 'moment-timezone';
 import InfiniteScroll from 'react-infinite-scroller';
 import UserHeader from "../UserHeader";
 import "./Feed.css";
@@ -45,7 +47,8 @@ class Feed extends Component {
                     <div className="station"><strong>Station:</strong> {post.station} </div>
                     <div className="train"><strong>Line:</strong> {post.trainLine}</div>
                     <div className="postType"><strong>Post Type:</strong> {post.postType} </div>
-                    <div className="date"><strong>Date: {post.date}</strong></div>
+                    <div className="date"><strong>Date:</strong> <Moment format="MM/DD/YYYY - hh:mm a">{post.date}</Moment></div>
+
                   </div>
                 </div>
                 </Col>
