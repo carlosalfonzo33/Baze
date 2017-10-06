@@ -14,6 +14,9 @@ A social Commuting application for users of BART - Bay Area Rapid Transit
 <img width="413" alt="screen shot 2017-10-05 at 2 18 00 pm" src="https://user-images.githubusercontent.com/25913749/31259325-bf1b213a-a9fa-11e7-81e4-61559095036d.png">
 
 
+<img width="410" alt="screen shot 2017-10-06 at 3 51 42 pm" src="https://user-images.githubusercontent.com/25913749/31301742-1f194e66-aab1-11e7-954a-d8c886c1ebef.png">
+
+
 ## Technologies used
 
 MERN STACK
@@ -26,15 +29,18 @@ MERN STACK
 ## New Technologies
 
 * Moment.JS
+* React-infinite-scroller
 
 
-## APIS
+## API's
 
 * BART Api - https://api.bart.gov/api/bsa.aspx?cmd=bsa&key=ZVZV-PH5D-9W3T-DWE9&date=today&json=y 
 
 
-## Authors
+## Developers
 
 * **Sarah Lessner** 
 * **Chris King** 
 * **Carlos Lopez** 
+
+## See it live @ https://baze.herokuapp.com/
