@@ -5,9 +5,7 @@ import "./LikeIt.css";
 
 
 const LikeBtn = props => (
-	<button className="like-btn" {...props}>
-       <i className="fa fa-thumbs-up"></i>
-	</button>
+    <i className="fa fa-thumbs-up like-btn" {...props}></i>
 	);
 
 export default LikeBtn;

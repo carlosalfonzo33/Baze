@@ -34,8 +34,9 @@
 }
 
 .station, .train, .station, .postType, .date {
-  font-size: 11px;
+  font-size: 15px;
   font-family: 'Open Sans Condensed', sans-serif;
+
 }
 
 
@@ -43,6 +44,13 @@
 	font-family: 'Marvel', sans-serif;
 	font-size: 22px;
   color: black;
+  overflow-wrap: break-word;
+}
+
+.loader {
+  margin-top: 20px;
+  text-align: center;
+  color: #65bdb4;
 }
 
 @media only screen and (max-width: 500px) {
@@ -57,13 +65,25 @@
 
     .feed-img {
       margin-top: 5px;
-      width: 80px;
-      height: 80px;
+      /*width: 80px;
+      height: 80px;*/
     }
 
     .username {
       margin-top: 10px;
     }
 
+
+}
+
+@media only screen and (max-width: 360px) {
+  .station, .train, .station, .postType, .date {
+    font-size: 11px;
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
+
+  .username {
+    font-size: 18px;
+  }
 
 }

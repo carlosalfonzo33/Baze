@@ -4,34 +4,15 @@ nav.navbar {
   border: none;
   border-radius: 0;
 }
-
 .feed-navbar {
   position: sticky;
   top: 0;
   z-index: 2;
 }
-
-/*.feed-navbar-main-container {
-  position: sticky;
-}*/
-
-/*.affix {
-      position: fixed;
-      top: 0;
-      z-index: 2;
-      width: 98%;
-
-}
-
-.affix + .container-fluid {
-  padding-top: 200px;
-}*/
-
 .navbar-default .navbar-nav>li>a {
   color: white;
   letter-spacing: 1.5px;
 }
-
 .navbar-default .navbar-nav>.active>a  {
   color: white;
   background: #90b6e6;
@@ -47,22 +28,18 @@ nav.navbar {
 .navbar-default .navbar-brand {
     color: white;
 }
-
 .navbar-default .navbar-brand:hover {
   background: #90b6e6;
   color: white;
 }
-
 .navbar-default
 .navbar-toggle{
   float: right;
   border-color: white;
 }
-
 .navbar-default .navbar-toggle .icon-bar {
   background-color: white;
 }
-
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: #90b6e6;
 }
